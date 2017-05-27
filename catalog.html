@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Мишка - каталог товаров</title>
+  </head>
+  <body>
+    <header class="main-header">
+      <h1 class="main-header__title">Мишка - изделия ручной работы, каталог</h1>
+      <div class="main-header__logo">
+          <a href="index.html"><img src="img/logo.svg" width="" height="" alt="Главная страница"></a>
+      </div>
+      <nav class="main-menu">
+        <span class="main-menu__toggler"><span></span></span>
+        <div class="main-menu__wrapper">
+            <ul class="main-menu__list">
+              <li class="main-menu__item"><a href="catalog.html">Каталог товаров</a></li>
+              <li class="main-menu__item"><a href="form.html">Вязание на заказ</a></li>
+              <li class="main-menu__item"><a href="#">Поиск по сайту</a></li>
+              <li class="main-menu__item"><a href="#">Корзина: пока пуста</a></li>
+            </ul>
+        </div>
+      </nav>
+    </header>
+    <header class="catalog-header">
+      <nav class="sub-menu">
+        <ul class="sub-menu__list">
+          <li class="sub-menu__item"><a href="#">Новые поступления</a></li>
+          <li class="sub-menu__item"><a href="#">Распродажа</a></li>
+          <li class="sub-menu__item"><a href="catalog.html">Каталог товаров</a></li>
+          <li class="sub-menu__item"><a href="form.html">Вязание на заказ</a></li>
+          <li class="free-delivery">Бесплатная доставка по России</li>
+        </ul>
+      </nav>
+      <h2 class="catalog-promo__title">Каталог товаров</h2>
+    </header>
+    <section class="articles">
+      <div class="articles__wrapper">
+        <div class="articles__item article-hare">
+          <img src="img/hare.svg" alt="Вязаный зайчик">
+          <span class="articles__title">Зайчик-попрыгайчик</span>
+          <span class="articles__descr">Рост 30 см, вес 200 г</span>
+          <span class="articles__price">1 200 руб.</span>
+        </div>
+        <div class="articles__item article-clothes-basket">
+          <img src="img/hare.svg" alt="Корзинка для белья">
+          <span class="articles__title">Корзинка для белья</span>
+          <span class="articles__descr">Диаметр 15 см, высота 10 см</span>
+          <span class="articles__price">690 руб.</span>
+        </div>
+        <div class="articles__item article-toys-basket">
+          <img src="img/hare.svg" alt="Большая корзинка для игрушек">
+          <span class="articles__title">Большая корзинка для игрушек</span>
+          <span class="articles__descr">Диаметр 30 см, высота 30 см</span>
+          <span class="articles__price">1 500 руб.</span>
+        </div>
+      </div>
+    </section>
+    <section class="video-presentation">
+      <header class="video-presentation__header">
+        <div class="video-presentation__header-wrapper">
+          <img class="video--icon" src="img/video-icon.svg">
+          <h2 class="video-presentation__header-title">Процесс производства</h2>
+        </div>
+      </header>
+      <video class="video-presentation__basket" poster="" metadata>
+        <source src="" type="">
+      </video>
+      <footer class="video-presentation__footer">
+        <div class="video-presentation__footer-wrapper">
+          <span class="video-presentation__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</span>
+          <div class="to-order btn">
+            <a href="#">Сделать заказ</a>
+          </div>
+        </div>
+      </footer>
+    </section>
+    <footer class="main-footer">
+      <div class="main-footer__wrapper">
+        <div class="footer__logo">
+          <img src="footer-logo.svg" alt="Мишка">
+        </div>
+        <div class="main-footer__social">
+          <div class="social social__instagram">
+            <a href="#">Инстаграм</a>
+          </div>
+          <div class="social social__facebook">
+            <a href="#">Фейсбук</a>
+          </div>
+          <div class="social social__twitter">
+            <a href="#">Твиттер</a>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>Разработано</p>
+          <div class="footer__logo"><img src="img/footer-logo.svg"></div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
