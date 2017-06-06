@@ -3,24 +3,25 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка - форма заказа</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="main-header">
-      <h1 class="main-header__title">Мишка - изделия ручной работы, форма заказа</h1>  <!-- Скрыть для всех, кроме читалок -->
-      <div class="main-header__logo">
-          <a href="index.html"><img src="img/logo.svg" width="" height="" alt="Главная страница"></a>
-      </div>
-      <nav class="main-menu">
-        <span class="main-menu__toggler"><span></span></span>
-        <div class="main-menu__wrapper">
+      <div class="main-header__wrapper">
+        <h1 class="main-header__title">Мишка - изделия ручной работы, форма заказа</h1> <!-- Скрыть для всех, кроме читалок -->
+          <div class="main-header__logo">
+            <a href="index.html"><img src="img/logo-mobile.svg" width="" height="" alt="Главная страница"></a>
+          </div>
+        <nav class="main-menu">
+          <span class="main-menu__toggler"><span></span></span>
           <ul class="main-menu__list">
             <li class="main-menu__item"><a href="catalog.html">Каталог товаров</a></li>
-            <li class="main-menu__item"><a href="#">Вязание на заказ</a></li>
+            <li class="main-menu__item"><a href="form.html">Вязание на заказ</a></li>
             <li class="main-menu__item"><a href="#">Поиск по сайту</a></li>
             <li class="main-menu__item"><a href="#">Корзина: пока пуста</a></li>
           </ul>
-        </div>
-      </nav>
+        </nav>
+      </div>
     </header>
     <section class="order">
       <nav class="order__sub-menu sub-menu"> <!--отображать полностью для десктопа, частично для планшета-->
@@ -33,11 +34,12 @@
         </ul>
       </nav>
       <h2 class="order__title">Вязание на заказ</h2>
+      <div class="order__inner">
       <form action="https://echo.htmlacademy.ru/" method="post">
-      <span class="order__info">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</span>
+      <p class="order__info">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
       <div class="order__form">
         <ul class="order__list">
-          <span class="order__heading">Тип</span>
+          <p class="order__heading">Тип</p>
           <li class="order__radio">
             <input type="radio" name="type" value="accessorizes" id="interior-accessorizes" checked>
             <label for="interior-accessorizes">Аксессуар для интерьера</label>
@@ -46,7 +48,7 @@
             <input type="radio" name="type" value="toys" id="toy">
             <label for="toy">Детская игрушка</label>
           </li>
-          <span class="order__heading">Цвет</span>
+          <p class="order__heading">Цвет</p>
           <li class="order__checkbox">
             <input type="checkbox" name="color" value="white" id="white" checked>
             <label for="white">Белый</label>
@@ -73,28 +75,28 @@
           </li>
         </ul>
         <ul class="order__list">
-          <span class="order__heading">фио</span>
+          <p class="order__heading">фио</p>
           <li class="order__input order__input--text">
-            <label for="first-name">Имя:</label>
+            <label for="first-name">Имя:<br></label>
             <input type="text" name="client-name" value="" placeholder="Введите ваше имя*" id="first-name" required>
           </li>
           <li class="order__input order__input--text">
-            <label for="last-name">Фамилия:</label>
+            <label for="last-name">Фамилия:<br></label>
             <input type="text" name="client-last-name" value="" placeholder="Укажите фамилию*" id="last-name" required>
           </li>
           <li class="order__input order__input--text">
-            <label for="patronym">Отчество:</label>
+            <label for="patronym">Отчество:<br></label>
             <input type="text" name="client-patronym" value="" placeholder="Отчество, если желаете" id="patronym">
           </li>
-          <span class="order__heading">тел</span>
+          <p class="order__heading">тел</p>
           <li class="order__input order__input--tel">
-            <input type="tel" name="client-tel" pattern="[+7]{2} [0-9]{3} [0-9]{2} [0-9]{2}" placeholder="+7 XXX XX XX*" value="+7" required>
+            <input type="tel" name="client-tel" pattern="[+7]{2} [0-9]{3} [0-9]{2} [0-9]{2}" placeholder="+7 XXX XX XX*" required>
           </li>
-          <span class="order__heading">e-mail</span>
+          <p class="order__heading">e-mail</p>
           <li class="order__input order__input--email">
             <input type="email" name="mail-data" placeholder="Ваш Email*" required>
           </li>
-          <span class="order__heading">доп</span>
+          <p class="order__heading">доп</p>
           <li class="order__input order__input--textarea">
             <textarea name="more-info" rows="7" placeholder="Опишите все ваши пожелания к заказу"></textarea>
           </li>
@@ -102,6 +104,7 @@
         <span class="required">*Поля обязательны для заполнения</span>
         <input class="order__btn btn" type="submit" value="отправить заказ">
       </div>
+    </div>
     </section>
     <footer class="main-footer">
       <div class="main-footer__wrapper">
@@ -116,7 +119,7 @@
         <div class="main-footer__copyright">
           <p>Разработано</p>
           <div class="main-footer__copyright-logo">
-            <img src="img/copyright-logo.svg" alt="html academy">
+            <a href="https://htmlacademy.ru/intensive/adaptive"><img src="img/logo-htmlacademy.svg" alt="html academy"></a>
           </div>
         </div>
       </div>

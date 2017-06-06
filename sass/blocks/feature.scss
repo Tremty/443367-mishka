@@ -1,0 +1,34 @@
+.feature {
+  @include time-border();
+}
+
+.feature__wrapper {
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+.feature__title {
+  margin-top: 30px;
+
+  font-size: 25px;
+  font-weight: bold;
+  line-height: 30px;
+  color: $color-heading;
+}
+
+.feature__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.feature__item {
+  margin-top: 90px;
+}
+
+.feature__descr {
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 20px;
+  color: $color-heading;
+}

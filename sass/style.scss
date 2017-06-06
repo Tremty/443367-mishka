@@ -1,0 +1,22 @@
+@import "variables.scss";
+@import "mixins.scss";
+
+@import "global/fonts.scss";
+
+@import "blocks/body.scss";
+@import "blocks/main-header.scss";
+@import "blocks/sub-menu.scss";
+@import "blocks/main-footer.scss";
+@import "blocks/btn.scss";
+@import "blocks/add-to-cart.scss";
+
+@import "blocks/promo.scss";
+@import "blocks/special.scss";
+@import "blocks/feature.scss";
+@import "blocks/review.scss";
+@import "blocks/contacts.scss";
+
+@import "blocks/production.scss";
+@import "blocks/video-presentation.scss";
+
+@import "blocks/order.scss";

@@ -1,0 +1,42 @@
+.add-to-cart {
+  @include time-border;
+}
+
+.add-to-cart__title {
+  margin-top: 30px;
+
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $color-heading;
+}
+
+.add-to-cart__tip {
+  font-size: 15px;
+  line-height: 30px;
+  text-align: center;
+  color: $color-normal;
+}
+
+.add-to-cart__choose-size input[type="radio"] {
+  display: none;
+}
+
+.add-to-cart__choose-size {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.add-to-cart__choose-size label {
+  padding: 15px 34px;
+
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 16px;
+  color: $color-normal;
+  border: 1px solid #ececec;
+}
