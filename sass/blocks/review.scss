@@ -1,0 +1,49 @@
+.review {
+  // delete
+  @include time-border();
+}
+
+.review__wrapper {
+  margin-right: 30px;
+  margin-left: 30px;
+
+}
+
+.review__title {
+  margin-top: 60px;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 30px;
+  color: $color-heading;
+}
+
+.review__item {
+  font-size: 15px;
+  line-height: 30px;
+  color: $color-normal;
+}
+
+.review__author-name {
+  margin-top: 30px;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 24px;
+  color: $color-heading;
+  text-decoration: underline;
+}
+
+.review__author-mail {
+  font-size: 17px;
+  line-height: 30px;
+  color: $color-normal;
+  text-decoration: underline;
+}
+
+.review__write {
+  margin-bottom: 30px;
+}
+
+// перенести
+.review__write {
+  display: block;
+}

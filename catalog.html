@@ -3,26 +3,28 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка - каталог товаров</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="main-header">
-      <h1 class="main-header__title">Мишка - изделия ручной работы, каталог</h1> <!-- Скрыть для всех, кроме читалок -->
-      <div class="main-header__logo">
-          <a href="index.html"><img src="img/logo.svg" width="" height="" alt="Главная страница"></a>
-      </div>
-      <nav class="main-menu">
-        <span class="main-menu__toggler"><span></span></span>
-        <div class="main-menu__wrapper">
+      <div class="main-header__wrapper">
+        <h1 class="main-header__title">Мишка - изделия ручной работы, каталог</h1> <!-- Скрыть для всех, кроме читалок -->
+          <div class="main-header__logo">
+            <a href="index.html"><img src="img/logo-mobile.svg" width="" height="" alt="Главная страница"></a>
+          </div>
+        <nav class="main-menu">
+          <span class="main-menu__toggler"><span></span></span>
           <ul class="main-menu__list">
-            <li class="main-menu__item"><a href="#">Каталог товаров</a></li>
+            <li class="main-menu__item"><a href="catalog.html">Каталог товаров</a></li>
             <li class="main-menu__item"><a href="form.html">Вязание на заказ</a></li>
             <li class="main-menu__item"><a href="#">Поиск по сайту</a></li>
             <li class="main-menu__item"><a href="#">Корзина: пока пуста</a></li>
           </ul>
-        </div>
-      </nav>
+        </nav>
+      </div>
     </header>
     <section class="production">
+      <div class="production__wrapper">
       <nav class="production__sub-menu sub-menu"> <!--отображать полностью для десктопа, частично для планшета-->
         <ul class="sub-menu__list">
           <li class="sub-menu__item"><a href="#">Новые поступления</a></li>
@@ -33,34 +35,36 @@
         </ul>
       </nav>
       <h2 class="production__main-title">Каталог товаров</h2>
-      <div class="production__wrapper">
+      <div class="production__inner">
         <div class="production__item">
-          <img src="img/hare.svg" alt="Вязаный зайчик">
-          <span class="production__title">Зайчик-попрыгайчик</span>
-          <span class="production__descr">Рост 30 см, вес 200 г</span>
-          <span class="production__price">1 200 руб.</span>
-          <button class="production__order-btn btn" type="button"></button>
+          <img src="img/photo-1-mobile@1x.jpg" alt="Вязаный зайчик" width="258px">
+          <p class="production__title">Зайчик-попрыгайчик</p>
+          <p class="production__descr">Рост 30 см, вес 200 г</p>
+          <p class="production__price">1 200 руб.</p>
+          <button class="production__order-btn little-btn" type="button"></button>
         </div>
         <div class="production__item">
-          <img src="img/clothes-basket.svg" alt="Корзинка для белья">
-          <span class="production__title">Корзинка для белья</span>
-          <span class="production__descr">Диаметр 15 см, высота 10 см</span>
-          <span class="production__price">690 руб.</span>
-          <button class="production__order-btn btn" type="button"></button>
+          <img src="img/photo-2-mobile@1x.jpg" alt="Корзинка для белья" width="258px">
+          <p class="production__title">Корзинка для белья</p>
+          <p class="production__descr">Диаметр 15 см, высота 10 см</p>
+          <p class="production__price">690 руб.</p>
+          <button class="production__order-btn little-btn" type="button"></button>
         </div>
         <div class="production__item">
-          <img src="img/toys-basket.svg" alt="Большая корзинка для игрушек">
-          <span class="production__title">Большая корзинка для игрушек</span>
-          <span class="production__descr">Диаметр 30 см, высота 30 см</span>
-          <span class="production__price">1 500 руб.</span>
-          <button class="production__order-btn btn" type="button"></button>
+          <img src="img/photo-3-mobile@1x.jpg" alt="Большая корзинка для игрушек" width="258px">
+          <p class="production__title">Большая корзинка для игрушек</p>
+          <p class="production__descr">Диаметр 30 см, высота 30 см</p>
+          <p class="production__price">1 500 руб.</p>
+          <button class="production__order-btn little-btn" type="button"></button>
         </div>
+      </div>
       </div>
     </section>
     <!-- Меню добавления в корзину -->
     <section class="add-to-cart">
       <form action="https://echo.htmlacademy.ru/" method="post">
-        <h2 class="add-to-cart__title">Добавить в корзину</h2>
+        <h2 class="add-to-cart__title">Добавить<br>в корзину</h2>
+        <p class="add-to-cart__tip">Выберите размер:</p>
         <div class="add-to-cart__choose-size">
           <label for="S">S</label>
             <input type="radio" name="size" id="S" value="S" checked>
@@ -73,17 +77,18 @@
     </section>
     <section class="video-presentation">
       <div class="video-presentation__wrapper">
-          <img class="video-presentation__icon" src="img/video-icon.svg">
-          <h2 class="video-presentation__title">Процесс производства</h2>
-      </div>
-      <video class="video-presentation__basket" poster="" metadata>
+          <!-- <img class="video-presentation__icon" src="img/video-icon.svg"> -->
+          <h2 class="video-presentation__title">Процесс<br>производства</h2>
+
+      <video class="video-presentation__basket" poster="img/video-mobile@1x.jpg" metadata>
         <source src="" type="">
       </video>
       <div class="video-presentation__info">
-        <span class="video-presentation__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</span>
+        <p class="video-presentation__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
         <div class="video-presentation__btn btn">
           <a href="#">Сделать заказ</a>
         </div>
+      </div>
       </div>
     </section>
     <footer class="main-footer">
@@ -99,7 +104,7 @@
         <div class="main-footer__copyright">
           <p>Разработано</p>
           <div class="main-footer__copyright-logo">
-            <img src="img/copyright-logo.svg" alt="html academy">
+            <a href="https://htmlacademy.ru/intensive/adaptive"><img src="img/logo-htmlacademy.svg" alt="html academy"></a>
           </div>
         </div>
       </div>

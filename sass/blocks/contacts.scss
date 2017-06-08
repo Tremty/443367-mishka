@@ -1,0 +1,45 @@
+.contacts {
+    @include time-border();
+}
+
+.contacts__wrapper {
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+.contacts__title {
+  margin-top: 30px;
+  margin-bottom: 0;
+
+  font-size: 25px;
+  font-weight: bold;
+  line-height: 30px;
+  color: $color-heading;
+}
+
+.contacts__info {
+  display: table;
+  width: 260px;
+
+  font-size: 15px;
+  line-height: 30px;
+  color: $color-normal;
+  border-collapse: collapse;
+}
+
+.contacts__data-title {
+  width: 75px;
+  vertical-align: top;
+}
+
+.contacts__mail .contacts__data-descr {
+  border-bottom: 1px solid #62d1ba;
+}
+
+.contacts__info td {
+  padding-top: 30px;
+}
+
+.contacts__location td {
+  padding-bottom: 30px;
+}

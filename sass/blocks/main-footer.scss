@@ -1,0 +1,56 @@
+.main-footer {
+  @include time-border();
+  background-color: #f1f1f1;
+}
+
+.main-footer__wrapper {
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+.main-footer__logo {
+  display: none;
+}
+
+.social {
+  display: flex;
+  margin-right: 40px;
+  margin-left: 40px;
+  justify-content: space-around;
+}
+
+.social__item {
+  margin-top: 30px;
+  width: 25px;
+  height: 25px;
+
+  font-size: 0px;
+  background-image: url("../img/icon-twitter.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  @include time-border(blue);
+}
+
+
+.main-footer__copyright {
+  display: flex;
+  margin-top: 60px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  margin-left: 30px;
+
+  align-items: center;
+  font-size: 19px;
+  font-weight: bold;
+  line-height: 18px;
+  color: $color-heading;
+}
+
+.main-footer__copyright-logo {
+  margin-left: 30px;
+}
+
+.main-footer__copyright-item {
+  margin-right: auto;
+  margin-left: auto;
+}

@@ -1,0 +1,83 @@
+.order__title {
+  margin-top: 0;
+  padding-top: 75px;
+  padding-bottom: 75px;
+
+  text-align: center;
+  font-weight: bold;
+  font-size: 27px;
+  line-height: 30px;
+  background-color: #ececec;
+  color: $color-heading;
+  @include time-border(blue);
+}
+
+.order__inner {
+  margin-top: 30px;
+  margin-right: 30px;
+  margin-bottom: 60px;
+  margin-left: 30px;
+}
+
+.order__info {
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+  font-size: 13px;
+  line-height: 24px;
+  color: $color-normal;
+}
+
+.order__list {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.order__heading {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: $color-sub;
+}
+
+.order__list li {
+  width: 260px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 18px;
+  color: $color-heading;
+}
+
+.required {
+  font-size: 14px;
+  line-height: 16px;
+  color: $color-normal;
+}
+
+textarea::-webkit-input-placeholder {
+  padding: 10px;
+  font-size: 17px;
+  line-height: 18px;
+  color: $color-normal;
+  opacity: 0.3;
+}
+
+input::-webkit-input-placeholder {
+  font-size: 17px;
+  line-height: 18px;
+  color: $color-normal;
+  opacity: 0.3;
+}
+
+.order__input input {
+    width: 100%;
+}
+
+.order__input textarea {
+    width: 100%;
+}
