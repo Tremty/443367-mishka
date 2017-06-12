@@ -4,24 +4,25 @@
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
     <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
   </head>
   <body>
     <header class="main-header">
-
+      <div class="main-header__wrapper">
         <h1 class="main-header__title">Мишка - изделия ручной работы</h1> <!-- Скрыть для всех, кроме читалок -->
-        <div class="main-header__logo">
-          <a href=""><img src="img/logo-mobile.svg" width="" height="" alt="Главная страница"></a>
-        </div>
         <nav class="main-menu">
-          <span class="main-menu__toggler"><span></span></span>
           <ul class="main-menu__list">
+            <li class="main-menu__item">
+              <a class="main-header__logo" href=""><img src="img/logo-mobile.svg" width="86px" height="35px" alt="Главная страница"></a>
+              <button class="main-menu__toggler" type="button">Открыть меню</button>
+          </li>
             <li class="main-menu__item"><a href="catalog.html">Каталог товаров</a></li>
             <li class="main-menu__item"><a href="form.html">Вязание на заказ</a></li>
             <li class="main-menu__item"><a href="#">Поиск по сайту</a></li>
             <li class="main-menu__item"><a href="#">Корзина: пока пуста</a></li>
           </ul>
         </nav>
-
+      </div>
     </header>
     <section class="promo">
       <div class="promo__wrapper">
@@ -31,14 +32,13 @@
             <li class="sub-menu__item"><a href="#">Распродажа</a></li>
             <li class="sub-menu__item"><a href="catalog.html">Каталог товаров</a></li>
             <li class="sub-menu__item"><a href="form.html">Вязание на заказ</a></li>
-            <li class="sub-menu__free-delivery">Бесплатная доставка по России</li>
+            <li class="sub-menu__item sub-menu__free-delivery">Бесплатная доставка по России</li>
           </ul>
         </nav>
         <h2 class="promo__title">
           Милые штуки
           ручной
           работы для дома</h2>
-        </div>
         <div class="promo__catalog">
           <div class="promo__catalog-item">
             <a class="promo__catalog-title" href="#">Предметы<br>интерьера</a>
@@ -53,15 +53,16 @@
             </div>
           </div>
         </div>
+      </div>
     </section>
     <article class="special">
       <div class="special__wrapper">
         <header class="special__header">
           <h2 class="special__title">Вязаные корзинки</h2>
-          <span class="special__aside">товар недели</span>
-          <p class="special__info">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+          <p class="special__aside">товар недели</p>
         </header>
         <div class="special__product">
+          <p class="special__info">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
           <table class="special__descr">
             <tr class="special__stat">
               <td class="special__descr-title">Цвет:</td>
@@ -77,15 +78,16 @@
             </tr>
           </table>
           <img class="special__product-icon" src="img/triple-set-mobile@1x.jpg" alt="Товар недели">
-          <div class="special__product-price">
-            <p>Цена: 990 руб.</p>
+          <p class="special__product-price">Цена: 990 руб.</p>
+          <div class="big-btn special__order-btn">
+            <a href="#">заказать</a>
           </div>
-          <button class="special__order-btn btn" type="button"></button>
         </div>
       </div>
     </article>
     <!-- Меню добавления в корзину -->
     <section class="add-to-cart">
+      <div class="add-to-cart__wrapper">
       <form action="https://echo.htmlacademy.ru/" method="post">
         <h2 class="add-to-cart__title">Добавить<br>в корзину</h2>
         <p class="add-to-cart__tip">Выберите размер:</p>
@@ -97,7 +99,8 @@
           <label for="L">L</label>
             <input type="radio" name="size" id="L" value="L">
         </div>
-      <button class="btn btn--add" type="submit" value="добавить">
+      <button class="big-btn btn--add" type="submit">добавить</button>
+    </div>
     </section>
     <section class="feature">
       <div class="feature__wrapper">
@@ -144,9 +147,13 @@
             </div>
           </div>
         </div>
-        <button class="btn review__prev" type="button">Предыдущий отзыв</button>
-        <button class="btn review__next" type="button">Следующий отзыв</button>
-        <button class="btn review__write" type="button">написать</button>
+        <div class="review__btn">
+          <button class="big-btn review__prev" type="button">Предыдущий отзыв</button>
+          <button class="big-btn review__next" type="button">Следующий отзыв</button>
+        </div>
+        <div class="big-btn review__write">
+          <a href="#">написать</a>
+        </div>
       </div>
     </section>
     <section class="contacts">
@@ -166,12 +173,14 @@
         <div class="contacts__map">
           <img src="img/map-mobile@1x.jpg" alt="Карта">
         </div>
-        <button class="btn contacts__write" type="button">напишите нам</button>
+        <div class="big-btn contacts__write">
+          <a href="#">напишите нам</a>
+        </div>
       </section>
     <footer class="main-footer">
       <div class="main-footer__wrapper">
         <div class="main-footer__logo">
-          <img src="main-footer-logo.svg" alt="Мишка">
+          <img src="img/logo-mobile.svg" alt="Мишка">
         </div>
         <div class="main-footer__social social">
           <a class="social__item social__item--instagram" href="#">Инстаграм</a>
