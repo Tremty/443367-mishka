@@ -10,7 +10,8 @@
     <header class="main-header">
       <div class="main-header__wrapper">
         <h1 class="main-header__title">Мишка - изделия ручной работы</h1> <!-- Скрыть для всех, кроме читалок -->
-        <nav class="main-menu">
+        <nav class="main-menu main-menu--closed main-menu--nojs">
+          <div class="main-menu__wrapper">
           <ul class="main-menu__list">
             <li class="main-menu__item">
               <a class="main-header__logo" href=""><img src="img/logo-mobile.svg" width="86px" height="35px" alt="Главная страница"></a>
@@ -21,6 +22,7 @@
             <li class="main-menu__item"><a href="#">Поиск по сайту</a></li>
             <li class="main-menu__item"><a href="#">Корзина: пока пуста</a></li>
           </ul>
+          </div>
         </nav>
       </div>
     </header>
@@ -79,29 +81,32 @@
           </table>
           <img class="special__product-icon" src="img/triple-set-mobile@1x.jpg" alt="Товар недели">
           <p class="special__product-price">Цена: 990 руб.</p>
-          <div class="big-btn special__order-btn">
+          <button class="big-btn special__order-btn cart-btn" type="button">заказать</button>
+          <!-- <div class="big-btn special__order-btn">
             <a href="#">заказать</a>
-          </div>
+          </div> -->
         </div>
       </div>
+
+      <!-- Меню добавления в корзину -->
+      <section class="add-to-cart add-to-cart--opened add-to-cart--closed">
+        <div class="add-to-cart__wrapper">
+        <form action="https://echo.htmlacademy.ru/" method="post">
+          <h2 class="add-to-cart__title">Добавить<br>в корзину</h2>
+          <p class="add-to-cart__tip">Выберите размер:</p>
+          <div class="add-to-cart__choose-size">
+            <label for="S">S</label>
+              <input type="radio" name="size" id="S" value="S" checked>
+            <label for="M">M</label>
+              <input type="radio" name="size" id="M" value="M">
+            <label for="L">L</label>
+              <input type="radio" name="size" id="L" value="L">
+          </div>
+        <button class="big-btn btn--add" type="submit">добавить</button>
+      </div>
+      </section>
+
     </article>
-    <!-- Меню добавления в корзину -->
-    <section class="add-to-cart">
-      <div class="add-to-cart__wrapper">
-      <form action="https://echo.htmlacademy.ru/" method="post">
-        <h2 class="add-to-cart__title">Добавить<br>в корзину</h2>
-        <p class="add-to-cart__tip">Выберите размер:</p>
-        <div class="add-to-cart__choose-size">
-          <label for="S">S</label>
-            <input type="radio" name="size" id="S" value="S" checked>
-          <label for="M">M</label>
-            <input type="radio" name="size" id="M" value="M">
-          <label for="L">L</label>
-            <input type="radio" name="size" id="L" value="L">
-        </div>
-      <button class="big-btn btn--add" type="submit">добавить</button>
-    </div>
-    </section>
     <section class="feature">
       <div class="feature__wrapper">
         <h2 class="feature__title">Коротко о нас:</h2>
@@ -180,7 +185,7 @@
     <footer class="main-footer">
       <div class="main-footer__wrapper">
         <div class="main-footer__logo">
-          <img src="img/logo-mobile.svg" alt="Мишка">
+          <a class="main-header__logo" href=""><img src="img/logo-mobile.svg" width="86px" height="35px" alt="Мишка"></a>
         </div>
         <div class="main-footer__social social">
           <a class="social__item social__item--instagram" href="#">Инстаграм</a>
@@ -195,5 +200,39 @@
         </div>
       </div>
     </footer>
+
+    <script>
+        var navMain = document.querySelector('.main-menu');
+        var navToggle = document.querySelector('.main-menu__toggler');
+
+        navMain.classList.remove('main-menu--nojs');
+
+        navToggle.addEventListener('click', function() {
+          if (navMain.classList.contains('main-menu--closed')) {
+            navMain.classList.remove('main-menu--closed');
+            navMain.classList.add('main-menu--opened');
+          } else {
+            navMain.classList.add('main-menu--closed');
+            navMain.classList.remove('main-menu--opened');
+          }
+        });
+
+          var addMain = document.querySelector('.add-to-cart');
+          var addToggle = document.querySelector('.cart-btn');
+
+          addMain.classList.remove('add-to-cart--nojs');
+
+          addToggle.addEventListener('click', function() {
+            if (addMain.classList.contains('add-to-cart--closed')) {
+              addMain.classList.remove('add-to-cart--closed');
+              addMain.classList.add('add-to-cart--opened');
+            } else {
+              addMain.classList.add('add-to-cart--closed');
+              addMain.classList.remove('add-to-cart--opened');
+            }
+          });
+        </script>
+
+
   </body>
 </html>

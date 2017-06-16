@@ -31,6 +31,15 @@
 
 .contacts__mail .contacts__data-descr {
   border-bottom: 1px solid #62d1ba;
+
+  &:hover {
+    color: #46c1ae;
+  }
+
+  &:active {
+    opacity: 0.3;
+    border-bottom: 1px solid #ecf9f7;
+  }
 }
 
 .contacts__info td {
@@ -98,13 +107,13 @@
 }
 
 
-@media (min-width: 1250px) {
+@media (min-width: 1150px) {
 
   .contacts {
     padding-top: 135px;
-    padding-right: 100px;
+    padding-right: 50px;
     padding-bottom: 107;
-    padding-left: 275px;
+    padding-left: 225px;
   }
 
   .contacts__title {

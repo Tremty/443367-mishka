@@ -25,15 +25,15 @@ img {
   }
 }
 
-@media (min-width: 1250px) {
+@media (min-width: 1150px) {
 
   body {
-    width: 1250px;
+    width: 1150px;
     margin: 0 auto;
   }
 }
 
-@media (max-width: 1250px) {
+@media (max-width: 1150px) {
 
   video[poster] {
     width: 100%;
