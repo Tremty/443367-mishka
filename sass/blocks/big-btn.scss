@@ -11,6 +11,17 @@
   text-transform: uppercase;
   background-color: $bg-color;
   border: 2px solid #444444;
+  border-radius: none;
+
+  &:hover {
+    background-color: $color-normal;
+    color: $bg-color;
+  }
+
+  &:active {
+    background-color: $color-normal;
+    color: $bg-color;
+  }
 }
 
 .big-btn a {
@@ -23,6 +34,15 @@
   text-align: center;
   text-decoration: none;
   color: $color-normal;
+
+  &:hover {
+    color: $bg-color;
+  }
+
+  &:active {
+    color: $bg-color;
+    opacity: 0.3;
+  }
 }
 
 .btn--add {
@@ -30,6 +50,14 @@
   background-color: #63d1bb;
   color: #ffffff;
   border-color: #63d1bb;
+
+  &:hover {
+    background-color: #63d1bb;
+  }
+
+  &:active {
+    background-color: #63d1bb;
+  }
 }
 
 @media (min-width: 768px) {

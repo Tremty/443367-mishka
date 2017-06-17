@@ -8,9 +8,11 @@
   </head>
   <body>
     <header class="main-header">
+      <div class="main-header__wrapper">
       <h1 class="main-header__title">Мишка - изделия ручной работы, каталог</h1> <!-- Скрыть для всех, кроме читалок -->
-      <nav class="main-menu">
-        <ul class="main-menu__list">
+      <nav class="main-menu main-menu--closed main-menu--nojs">
+        <div class="main-menu__wrapper">
+          <ul class="main-menu__list">
           <li class="main-menu__item">
             <a class="main-header__logo" href="index.html"><img src="img/logo-mobile.svg" width="86px" height="35px" alt="Главная страница"></a>
             <button class="main-menu__toggler" type="button">Открыть меню</button>
@@ -20,7 +22,9 @@
           <li class="main-menu__item"><a href="#">Поиск по сайту</a></li>
           <li class="main-menu__item"><a href="#">Корзина: пока пуста</a></li>
         </ul>
+        </div>
       </nav>
+      </div>
     </header>
     <section class="production">
       <div class="production__title-wrapper">
@@ -39,49 +43,50 @@
         <div class="production__item">
           <img src="img/photo-1-mobile@1x.jpg" alt="Вязаный зайчик" width="258px">
           <div class="production__info">
-            <p class="production__title">Зайчик-попрыгайчик</p>
+            <a href=""><p class="production__title">Зайчик-попрыгайчик</p></a>
             <p class="production__descr">Рост 30 см, вес 200 г</p>
             <p class="production__price">1 200 руб.</p>
-            <button class="production__order-btn" type="button"></button>
+            <button class="production__order-btn cart-btn" type="button"></button>
           </div>
         </div>
         <div class="production__item">
           <img src="img/photo-2-mobile@1x.jpg" alt="Корзинка для белья" width="258px">
           <div class="production__info">
-            <p class="production__title">Корзинка для белья</p>
+            <a href=""><p class="production__title">Корзинка для белья</p></a>
             <p class="production__descr">Диаметр 15 см, высота 10 см</p>
             <p class="production__price">690 руб.</p>
-            <button class="production__order-btn" type="button"></button>
+            <button class="production__order-btn cart-btn" type="button"></button>
           </div>
         </div>
         <div class="production__item">
           <img src="img/photo-3-mobile@1x.jpg" alt="Большая корзинка для игрушек" width="258px">
           <div class="production__info">
-            <p class="production__title">Большая корзинка<br>для игрушек</p>
+            <a href=""><p class="production__title">Большая корзинка<br>для игрушек</p></a>
             <p class="production__descr">Диаметр 30 см, высота 30 см</p>
             <p class="production__price">1 500 руб.</p>
-            <button class="production__order-btn" type="button"></button>
+            <button class="production__order-btn cart-btn" type="button"></button>
           </div>
         </div>
       </div>
+      <!-- Меню добавления в корзину -->
+      <section class="add-to-cart add-to-cart--closed add-to-cart--opened">
+        <div class="add-to-cart__wrapper">
+        <form action="https://echo.htmlacademy.ru/" method="post">
+          <h2 class="add-to-cart__title">Добавить<br>в корзину</h2>
+          <p class="add-to-cart__tip">Выберите размер:</p>
+          <div class="add-to-cart__choose-size">
+            <label for="S">S</label>
+              <input type="radio" name="size" id="S" value="S" checked>
+            <label for="M">M</label>
+              <input type="radio" name="size" id="M" value="M">
+            <label for="L">L</label>
+              <input type="radio" name="size" id="L" value="L">
+          </div>
+        <button class="big-btn btn--add" type="submit">добавить</button>
+      </div>
+      </section>
     </section>
-    <!-- Меню добавления в корзину -->
-    <section class="add-to-cart">
-      <div class="add-to-cart__wrapper">
-      <form action="https://echo.htmlacademy.ru/" method="post">
-        <h2 class="add-to-cart__title">Добавить<br>в корзину</h2>
-        <p class="add-to-cart__tip">Выберите размер:</p>
-        <div class="add-to-cart__choose-size">
-          <label for="S">S</label>
-            <input type="radio" name="size" id="S" value="S" checked>
-          <label for="M">M</label>
-            <input type="radio" name="size" id="M" value="M">
-          <label for="L">L</label>
-            <input type="radio" name="size" id="L" value="L">
-        </div>
-      <button class="big-btn btn--add" type="submit">добавить</button>
-    </div>
-    </section>
+
     <section class="video-presentation">
       <div class="video-presentation__wrapper">
         <h3 class="video-presentation__title">Процесс<br>производства</h3>
@@ -99,7 +104,7 @@
     <footer class="main-footer">
       <div class="main-footer__wrapper">
         <div class="main-footer__logo">
-          <img src="img/logo-mobile.svg" alt="Мишка">
+          <a class="main-header__logo" href=""><img src="img/logo-mobile.svg" width="86px" height="35px" alt="Мишка"></a>
         </div>
         <div class="main-footer__social social">
           <a class="social__item social__item--instagram" href="#">Инстаграм</a>
@@ -114,5 +119,38 @@
         </div>
       </div>
     </footer>
+
+    <script>
+        var navMain = document.querySelector('.main-menu');
+        var navToggle = document.querySelector('.main-menu__toggler');
+
+        navMain.classList.remove('main-menu--nojs');
+
+        navToggle.addEventListener('click', function() {
+          if (navMain.classList.contains('main-menu--closed')) {
+            navMain.classList.remove('main-menu--closed');
+            navMain.classList.add('main-menu--opened');
+          } else {
+            navMain.classList.add('main-menu--closed');
+            navMain.classList.remove('main-menu--opened');
+          }
+        });
+
+        var addMain = document.querySelector('.add-to-cart');
+        var addToggle = document.querySelector('.cart-btn');
+
+        addMain.classList.remove('add-to-cart--nojs');
+
+        addToggle.addEventListener('click', function() {
+          if (addMain.classList.contains('add-to-cart--closed')) {
+            addMain.classList.remove('add-to-cart--closed');
+            addMain.classList.add('add-to-cart--opened');
+          } else {
+            addMain.classList.add('add-to-cart--closed');
+            addMain.classList.remove('add-to-cart--opened');
+          }
+        });
+      </script>
+
   </body>
 </html>

@@ -8,12 +8,13 @@
   </head>
   <body>
     <header class="main-header">
+      <div class="main-header__wrapper">
         <h1 class="main-header__title">Мишка - изделия ручной работы, форма заказа</h1> <!-- Скрыть для всех, кроме читалок -->
-        <nav class="main-menu">
+        <nav class="main-menu main-menu--closed main-menu--nojs">
+          <div class="main-menu__wrapper">
           <ul class="main-menu__list">
             <li class="main-menu__item">
               <a class="main-header__logo" href="index.html"><img src="img/logo-mobile.svg" width="86px" height="35px" alt="Главная страница"></a>
-              <!-- <span class="main-menu__toggler"><span></span></span> -->
               <button class="main-menu__toggler" type="button">Открыть меню</button>
             </li>
             <li class="main-menu__item"><a href="catalog.html">Каталог товаров</a></li>
@@ -21,8 +22,9 @@
             <li class="main-menu__item"><a href="#">Поиск по сайту</a></li>
             <li class="main-menu__item"><a href="#">Корзина: пока пуста</a></li>
           </ul>
+          </div>
         </nav>
-
+        </div>
       </header>
       <section class="order">
         <nav class="order__sub-menu sub-menu"> <!--отображать полностью для десктопа, частично для планшета-->
@@ -43,7 +45,7 @@
         <ul class="order__list">
           <li class="order__radio">
             <input type="radio" name="type" value="accessorizes" id="interior-accessorizes" checked>
-            <label for="interior-accessorizes">Аксессуар для интерьера</label>
+            <label for="interior-accessorizes">Аксессуар для<br>интерьера</label>
           </li>
           <li class="order__radio">
             <input type="radio" name="type" value="toys" id="toy">
@@ -105,7 +107,7 @@
           </li>
         </ul>
         <ul class="order__list">
-          <p class="order__heading">e-mail</p>
+          <p class="order__heading">e&nbsp-&nbspmail</p>
           <li class="order__input order__input--email">
             <input type="email" name="mail-data" placeholder="Ваш Email*" required>
           </li>
@@ -128,7 +130,7 @@
     <footer class="main-footer">
       <div class="main-footer__wrapper">
         <div class="main-footer__logo">
-          <img src="img/logo-mobile.svg" alt="Мишка">
+          <a class="main-header__logo" href=""><img src="img/logo-mobile.svg" width="86px" height="35px" alt="Мишка"></a>
         </div>
         <div class="main-footer__social social">
           <a class="social__item social__item--instagram" href="#">Инстаграм</a>
@@ -143,5 +145,23 @@
         </div>
       </div>
     </footer>
+
+    <script>
+        var navMain = document.querySelector('.main-menu');
+        var navToggle = document.querySelector('.main-menu__toggler');
+
+        navMain.classList.remove('main-menu--nojs');
+
+        navToggle.addEventListener('click', function() {
+          if (navMain.classList.contains('main-menu--closed')) {
+            navMain.classList.remove('main-menu--closed');
+            navMain.classList.add('main-menu--opened');
+          } else {
+            navMain.classList.add('main-menu--closed');
+            navMain.classList.remove('main-menu--opened');
+          }
+        });
+      </script>
+
   </body>
 </html>

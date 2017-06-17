@@ -16,16 +16,31 @@
   background-position: top;
 }
 
+.promo__catalog {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  padding-bottom: 190px;
+}
+
 .promo__catalog-item {
-    width: 100%;
+  position: absolute;
+  width: 100%;
+
+
 }
 
 .promo__catalog-item:first-of-type {
+
+  bottom: 95px;
   background-color: #63d1bb;
 }
 
 .promo__catalog-item:last-of-type {
   background-color: #56c3b2;
+
+  bottom: 0px;
 }
 
 .promo__catalog-item a {
@@ -39,6 +54,14 @@
   line-height: 24px;
   color: #ffffff;
   text-decoration: none;
+
+  &:hover {
+    padding-bottom: 28.5px;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: 768px) {
@@ -70,29 +93,42 @@
   }
 
   .promo__catalog {
-    display: flex;
+    padding-bottom: 230px;
   }
+
 
   .promo__catalog-item a {
     padding-top: 30px;
     padding-bottom: 30px;
     font-size: 20px;
     line-height: 30px;
+
+    &:hover {
+      padding-bottom: 35px;
+    }
   }
+
+  .promo__catalog-item:first-of-type {
+    bottom: 115px;
+  }
+
+  .promo__catalog-item:last-of-type {
+    bottom: 0px;
+  }
+
+
+
+
+
 }
 
-@media (min-width: 1250px) {
-
-  .promo__wrapper {
-    padding-right: 100px;
-    padding-left: 100px;
-  }
+@media (min-width: 1150px) {
 
   .promo__title {
     padding-top: 100px;
-    padding-right: 210px;
+    padding-right: 160px;
     padding-bottom: 400px;
-    padding-left: 210px;
+    padding-left: 160px;
 
     font-size: 53px;
     line-height: 57px;

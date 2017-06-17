@@ -1,3 +1,8 @@
+.production {
+  position: relative;
+  overflow: hidden;
+}
+
 .production__title-wrapper {
   background-color: #f1f1f1;
 }
@@ -41,7 +46,20 @@
   font-weight: bold;
   font-size: 17px;
   line-height: 24px;
+
   color: $color-heading;
+}
+
+.production__info a {
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .production__descr {
@@ -136,7 +154,7 @@
   }
 }
 
-@media (min-width: 1250px) {
+@media (min-width: 1150px) {
 
   .production__title-wrapper {
     padding-left: 50px;

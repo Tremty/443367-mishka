@@ -1,5 +1,7 @@
 .special {
+  position: relative;
   padding: 30px 30px 0px 30px;
+  overflow: hidden;
 }
 
 .special__title {
@@ -123,10 +125,10 @@
   }
 }
 
-@media (min-width: 1250px) {
+@media (min-width: 1150px) {
 
   .special {
-    padding: 115px 100px 96px 100px;
+    padding: 115px 50px 96px 50px;
   }
 
   .special__header {
