@@ -1,8 +1,11 @@
 .contacts {
-  padding-top: 40px;
-  padding-right: 30px;
-  padding-bottom: 35px;
-  padding-left: 30px;
+  padding-top: 14px;
+  padding-bottom: 37px;
+}
+
+.contacts__wrapper {
+    padding-right: 30px;
+    padding-left: 30px;
 }
 
 .contacts__title {
@@ -17,6 +20,7 @@
 .contacts__info {
   display: table;
   width: 260px;
+  margin-bottom: 10px;
 
   font-size: 15px;
   line-height: 30px;
@@ -43,28 +47,53 @@
 }
 
 .contacts__info td {
-  padding-top: 30px;
+  padding-top: 26px;
 }
 
 .contacts__location td {
   padding-bottom: 30px;
 }
 
+.contacts__map {
+   width: 320px;
+   height: 457px;
+   margin-bottom: 38px;
+}
+
 @media (min-width: 768px) {
 
   .contacts {
     padding-top: 60px;
-    padding-right: 50px;
     padding-bottom: 55px;
+  }
+
+  .contacts__wrapper {
+    padding-right: 50px;
     padding-left: 50px;
   }
 
   .contacts__title {
+    position: relative;
     margin: 0;
     margin-bottom: 20px;
 
     font-size: 43px;
     line-height: 50px;
+  }
+
+  .contacts__title::before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 80px;
+
+    top: -15px;
+    right: 0px;
+
+    background-image: url("../img/icon-flag.svg");
+    background-repeat: no-repeat;
+    background-size: 50px 80px;
+    background-position: center;
   }
 
   .contacts__info {
@@ -97,6 +126,10 @@
     margin-right: 20px;
   }
 
+  .contacts__map {
+    width: 100%;
+  }
+
   .contacts__write {
     display: block;
     width: 226px;
@@ -110,14 +143,24 @@
 @media (min-width: 1150px) {
 
   .contacts {
-    padding-top: 135px;
+    display: flex;
+    height: 560px;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    padding-top: 73px;
     padding-right: 50px;
-    padding-bottom: 107;
+    padding-bottom: 0;
     padding-left: 225px;
   }
 
+  .contacts__wrapper {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
   .contacts__title {
-      margin-top: 40px;
+      margin-top: 70px;
       font-size: 53px;
       line-height: 57px;
   }
@@ -126,15 +169,8 @@
       flex-direction: column;
   }
 
-  .contacts {
-    display: flex;
-    height: 600px;
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
-
   .contacts__map {
-    width: 535px;
+    width: 520px;
     order: 3;
   }
 
@@ -143,6 +179,16 @@
   }
 
   .contacts__info {
-    margin-right: 20px;
+    margin-right: 30px;
+  }
+
+  .contacts__write {
+    margin-top: 27px;
+    margin-left: 0;
+  }
+
+  .contacts__title::before {
+    top: -8px;
+    left: -114px;
   }
 }

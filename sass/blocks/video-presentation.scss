@@ -5,20 +5,70 @@
   padding-left: 30px;
 }
 
+.video-presentation__basket {
+  width: 0;
+  height: 0;
+}
+
 .video-presentation__wrapper {
+  position: relative;
+
   padding-bottom: 30px;
   border: 1px solid #ececec;
+
+  &:hover {
+    box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
+  }
+}
+
+.video-presentation__wrapper::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+
+  width: 32px;
+  height: 32px;
+
+  background-image: url("../img/icon-video.svg");
 }
 
 .video-presentation__title {
   margin-top: 25px;
-  margin-bottom: 25px;
   padding-left: 90px;
 
   font-weight: bold;
   font-size: 17px;
   line-height: 24px;
   color: $color-heading;
+}
+
+.video-presentation__poster {
+  width: 100%;
+}
+
+.video-presentation__design {
+  position: relative;
+
+  &:hover svg {
+    transform: scale(1.2);
+  }
+
+  &:active svg {
+    transform: scale(0.8);
+    opacity: 0.6;
+  }
+}
+
+.video-presentation__design svg {
+  position: absolute;
+  bottom: 40px;
+  left: 80px;
 }
 
 .video-presentation__info {
@@ -40,7 +90,7 @@
 @media (min-width: 768px) {
 
   .video-presentation {
-    padding-top: 53px;
+    padding-top: 0px;
     padding-right: 50px;
     padding-bottom: 63px;
     padding-left: 50px;
@@ -50,6 +100,11 @@
     display: flex;
     flex-direction: column;
     padding-bottom: 46px;
+  }
+
+  .video-presentation__wrapper::before {
+    top: 515px;
+    left: 40px;
   }
 
   .video-presentation__title {
@@ -77,9 +132,14 @@
     font-size: 15px;
     line-height: 30px;
   }
+
+  .video-presentation__design svg {
+    bottom: 190px;
+    left: 280px;
+  }
 }
 
-@media (min-width: 768px) and (max-width: 1250px) {
+@media (min-width: 768px) and (max-width: 1150px) {
 
   .video-presentation__title br {
     content: "";
@@ -93,6 +153,10 @@
 
 @media (min-width: 1150px) {
 
+  .video-presentation {
+    padding-bottom: 110px;
+  }
+
   .video-presentation__wrapper {
       flex-direction: column;
       flex-wrap: wrap;
@@ -100,8 +164,9 @@
       padding-bottom: 0;
   }
 
-  .video-presentation__basket {
-    height: 455px;
+  .video-presentation__wrapper::before {
+    top: 40px;
+    left: 760px;
   }
 
   .video-presentation__title {
@@ -118,5 +183,14 @@
     margin-left: auto;
     padding-right: 57px;
     padding-left: 70px;
+  }
+
+  .video-presentation__text {
+    padding-bottom: 30px;
+  }
+
+  .video-presentation__design img {
+    width: 682px;
+    height: 455px;
   }
 }

@@ -1,12 +1,12 @@
 .special {
   position: relative;
-  padding: 30px 30px 0px 30px;
+  padding: 25px 30px 27px 30px;
   overflow: hidden;
 }
 
 .special__title {
   margin-top: 0px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   color: $color-heading;
   font-weight: bold;
   font-size: 25px;
@@ -14,6 +14,7 @@
 }
 
 .special__aside {
+  margin: 0;
   font-weight: bold;
   font-size: 17px;
   line-height: 20px;
@@ -22,8 +23,8 @@
 }
 
 .special__info {
-  margin-top: 30px;
-  margin-bottom: 20px;
+  margin-top: 23px;
+  margin-bottom: 17px;
   font-size: 15px;
   line-height: 24px;
   color: $color-normal;
@@ -42,17 +43,17 @@
 
 .special__stat td {
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 9.5px;
   border-bottom: 1px solid #ececec;
 }
 
 .special__descr-title {
-  width: 34,5%;
+  width: 38%;
 }
 
 .special__product-price {
   margin: 0;
-  padding-top: 25px;
+  padding-top: 19px;
 
   text-align: center;
   font-weight: bold;
@@ -62,19 +63,21 @@
 }
 
 .special__order-btn {
-  margin-bottom: 35px;
+  &:active {
+    color: #8d8d8d;
+  }
 }
 
 @media (min-width: 768px) {
 
   .special {
-    padding: 50px 50px 0px 50px;
+    padding: 41px 50px 50px 50px;
   }
 
   .special__header {
     display: flex;
     flex-direction: row;
-    margin-bottom: 50px;
+    margin-bottom: 45px;
   }
 
   .special__title {
@@ -110,7 +113,7 @@
   .special__info {
     font-size: 17px;
     line-height: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
   }
 
   .special__descr {
@@ -118,8 +121,8 @@
   }
 
   .special__product-price {
-    padding-top: 27px;
-    padding-bottom: 12px;
+    padding-top: 32px;
+    padding-bottom: 10px;
     font-size: 20px;
     line-height: 24px;
   }
@@ -128,19 +131,19 @@
 @media (min-width: 1150px) {
 
   .special {
-    padding: 115px 50px 96px 50px;
+    padding: 120px 50px 70px 50px;
   }
 
   .special__header {
     flex-direction: row-reverse;
     justify-content: flex-end;
-    margin-bottom: 60px;
+    margin-bottom: 42px;
   }
 
   .special__aside {
     flex-basis: 96px;
     margin: 0;
-    padding-left: 40px;
+    padding-left: 34px;
     padding-right: 40px;
     align-self: center;
   }
@@ -163,11 +166,11 @@
   }
 
   .special__info {
-    margin-bottom: 60px;
+    margin-bottom: 50px;
   }
 
   .special__product-price {
-    padding-bottom: 0px;
-    padding-top: 73px;
+    padding-bottom: 10px;
+    padding-top: 83px;
   }
 }
