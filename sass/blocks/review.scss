@@ -1,11 +1,12 @@
 .review {
+  padding-top: 5px;
   padding-right: 30px;
-  padding-bottom: 45px;
+  padding-bottom: 35px;
   padding-left: 30px;
 }
 
 .review__title {
-  margin-top: 30px;
+  margin-top: 23px;
   margin-bottom: 30px;
   font-weight: bold;
   font-size: 25px;
@@ -20,7 +21,7 @@
 }
 
 .review__item p {
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .review__author-name {
@@ -31,6 +32,7 @@
 }
 
 .review__author-mail {
+
   font-size: 17px;
   line-height: 30px;
   color: $color-normal;
@@ -47,27 +49,35 @@
 
 .review__btn button:first-of-type {
   border-right: 0.5px solid #ececec;
-  // background-image: ;
-  // background-repeat: no-repeat;
 }
 
 .review__btn button:last-of-type {
   border-left: 0.5px solid #ececec;
-  // background-image: ;
-  // background-repeat: no-repeat;
+}
+
+.review__write {
+  margin-top: 42px;
 }
 
 @media (min-width: 768px) {
 
   .review {
-    padding-top: 70px;
+    padding-top: 79px;
     padding-right: 50px;
-    padding-bottom: 130px;
+    padding-bottom: 110px;
     padding-left: 50px;
 
     background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
-    background-position: top left;
+    background-position: 0px 0px;
+    background-size: 350px 457px;
+  }
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .review {
+      background-image: url("../img/review@2x.jpg");
+      background-size: 350px 457px;
+    }
   }
 
   .review__wrapper {
@@ -76,7 +86,7 @@
 
   .review__title {
     margin-top: 0px;
-    margin-bottom: 60px;
+    padding-bottom: 20px;
 
     font-size: 43px;
     line-height: 50px;
@@ -97,11 +107,11 @@
     right: 0;
     width: 170px;
     margin: 0;
-    padding: 0;
   }
 
   .review__item p {
     margin-top: 0;
+    margin-bottom: 34px;
     font-size: 17px;
     line-height: 30px;
   }
@@ -116,27 +126,39 @@
     font-size: 18px;
     line-height: 24px;
   }
+
+  .review__btn button {
+    border: none;
+  }
+
+  .review__btn button:last-of-type {
+    border: none;
+  }
+
+  .review__btn button:first-of-type {
+    border: none;
+  }
 }
 
 @media (min-width: 1150px) {
 
   .review {
     padding-right: 50px;
-    padding-bottom: 0;
+    padding-bottom: 160px;
     padding-left: 225px;
 
     background-position: 50px 0;
   }
 
   .review__title {
-    margin-bottom: 57px;
+    margin-bottom: 20px;
     font-size: 53px;
     line-height: 57px;
   }
 
   .review__item p {
-    width: 760px;
-    margin-bottom: 10px;
+    width: 770px;
+    padding-bottom: 10px;
   }
 
   .review__author-name {
@@ -145,6 +167,10 @@
   }
 
   .review__author-mail {
-    margin-bottom: 100px;
+    // margin-bottom: 100px;
+  }
+
+    .review__btn {
+      bottom: 10px;
   }
 }

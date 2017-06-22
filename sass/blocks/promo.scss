@@ -1,7 +1,7 @@
 .promo__title {
   margin: 0;
-  padding-top: 65px;
-  padding-bottom: 115px;
+  padding-top: 40px;
+  padding-bottom: 140px;
 
   font-size: 27px;
   line-height: 30px;
@@ -12,8 +12,15 @@
   background-color: #f9f9f9;
   background-image: url("../img/hero-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-size: 0 cover;
-  background-position: top;
+  background-size: 580px auto;
+  background-position: -130px -15px;
+}
+
+@media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .promo__title {
+    background-image: url("../img/hero-mobile@2x.jpg");
+      background-size: 1160 auto;
+  }
 }
 
 .promo__catalog {
@@ -27,26 +34,22 @@
 .promo__catalog-item {
   position: absolute;
   width: 100%;
-
-
 }
 
 .promo__catalog-item:first-of-type {
-
-  bottom: 95px;
+  bottom: 97px;
   background-color: #63d1bb;
 }
 
 .promo__catalog-item:last-of-type {
   background-color: #56c3b2;
-
-  bottom: 0px;
+  bottom: 3px;
 }
 
 .promo__catalog-item a {
   display: block;
-  padding-top: 23.5px;
-  padding-bottom: 23.5px;
+  padding-top: 27px;
+  padding-bottom: 27px;
   padding-left: 30px;
 
   font-weight: bold;
@@ -64,22 +67,46 @@
   }
 }
 
+.promo__catalog-title img {
+  position: absolute;
+  top: 20px;
+  right: 26px;
+
+  opacity: 0.2;
+}
+
+.promo__catalog-item:first-of-type .promo__catalog-title img {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+
+  opacity: 0.2;
+}
+
+
 @media (min-width: 768px) {
 
   .promo__wrapper {
     padding-right: 50px;
     padding-left: 50px;
 
-    background-image: url("../img/hero-mobile@1x.jpg");
+    background-image: url("../img/hero-desktop@1x.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-size: 1150px auto;
+    background-position: -190px 0px;
+  }
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .promo__wrapper {
+      background-image: url("../img/hero-desktop@2x.jpg");
+        background-size: 2400 auto;
+    }
   }
 
   .promo__title {
-    padding-top: 100px;
+    padding-top: 93px;
     padding-right: 70px;
-    padding-bottom: 385px;
+    padding-bottom: 375px;
     padding-left: 70px;
 
     font-size: 43px;
@@ -93,44 +120,105 @@
   }
 
   .promo__catalog {
-    padding-bottom: 230px;
+    padding: 0;
+    flex-direction: row;
+    background-image: linear-gradient(to right, #63d1bb 50%, #56c3b2 50%);
   }
-
 
   .promo__catalog-item a {
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 33px;
+    padding-left: 35px;
     font-size: 20px;
     line-height: 30px;
-
-    &:hover {
-      padding-bottom: 35px;
-    }
   }
 
   .promo__catalog-item:first-of-type {
-    bottom: 115px;
+    position: relative;
+    bottom: 0px;
+
+    &:hover {
+      bottom: 5px;
+    }
   }
 
   .promo__catalog-item:last-of-type {
+    position: relative;
     bottom: 0px;
+
+    &:hover {
+      bottom: 5px;
+    }
   }
 
+  .promo__catalog-title img {
+    top: 27px;
+  }
 
+  .promo__catalog-item:first-of-type .promo__catalog-title img {
+    top: 28px;
+  }
 
+  .promo__catalog-item:last-of-type .promo__catalog-title img {
+    top: 30px;
+    right: 35px;
+  }
 
+  .promo {
+    position: relative;
+  }
 
+  .promo::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 25px;
+
+    bottom: -7px;
+
+    background-image: url("../img/bg-zigzag-fill.svg");
+    background-repeat: repeat-x;
+    background-size: 768px 25px;
+    background-position: 0px 0px;
+  }
 }
 
 @media (min-width: 1150px) {
 
+  .promo__wrapper {
+    background-image: none;
+  }
+
+  .promo {
+    background-color: #f9f9f9;
+    background-image: url("../img/hero-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: 1250px 745px;
+    background-position: -50px 0px;
+  }
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .promo {
+      background-image: url("../img/hero-desktop@2x.jpg");
+        background-size: 1250px 745px;
+        background-position: -50px 0px;
+    }
+  }
+
   .promo__title {
-    padding-top: 100px;
+    padding-top: 95px;
     padding-right: 160px;
-    padding-bottom: 400px;
+    padding-bottom: 360px;
     padding-left: 160px;
 
     font-size: 53px;
     line-height: 57px;
+  }
+
+  .promo::after {
+    height: 34px;
+    bottom: -19px;
+    background-size: 1150px 34px;
   }
 }
