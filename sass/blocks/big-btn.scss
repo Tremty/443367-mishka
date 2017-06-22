@@ -27,6 +27,15 @@
   &:focus {
     outline: none;
   }
+
+    &:not(.review__btn--prev):not(.review__btn--next):hover a {
+      color: $bg-color;
+    }
+
+    &:not(.review__btn--prev):not(.review__btn--next):active a {
+      color: $bg-color;
+      opacity: 0.3;
+    }
 }
 
 
@@ -40,15 +49,6 @@
   text-align: center;
   text-decoration: none;
   color: $color-normal;
-
-  &:hover {
-    color: $bg-color;
-  }
-
-  &:active {
-    color: $bg-color;
-    opacity: 0.3;
-  }
 }
 
 .review__btn--prev {
