@@ -53,6 +53,7 @@
   line-height: 24px;
   text-decoration: none;
   color: $color-heading;
+  cursor: pointer;
 
   &:hover {
     opacity: 0.6;
@@ -161,15 +162,21 @@
     height: auto;
   }
 
-  .main-menu--nojs .main-menu__item {
-    display: block;
-  }
+
 
   .main-menu--closed .main-menu__item:nth-of-type(2),
   .main-menu--closed .main-menu__item:nth-of-type(3),
   .main-menu--closed .main-menu__item:nth-of-type(4),
   .main-menu--closed .main-menu__item:nth-of-type(5) {
     display: none;
+  }
+
+  .main-menu--nojs .main-menu__item,
+  .main-menu--nojs .main-menu__item:nth-of-type(2),
+  .main-menu--nojs .main-menu__item:nth-of-type(3),
+  .main-menu--nojs .main-menu__item:nth-of-type(4),
+  .main-menu--nojs .main-menu__item:nth-of-type(5) {
+    display: block;
   }
 }
 

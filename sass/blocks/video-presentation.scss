@@ -15,6 +15,7 @@
 
   padding-bottom: 30px;
   border: 1px solid #ececec;
+  cursor: pointer;
 
   &:hover {
     box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.1);
@@ -54,6 +55,7 @@
 
 .video-presentation__design {
   position: relative;
+  cursor: pointer;
 
   &:hover svg {
     transform: scale(1.2);
