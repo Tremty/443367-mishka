@@ -27,6 +27,7 @@
 
 .social__icon  {
   fill: #231F20;
+  cursor: pointer;
 
   &:hover {
     fill: #46c1ae;
@@ -45,6 +46,7 @@
   line-height: 18px;
   text-decoration: none;
   color: $color-heading;
+  cursor: pointer;
 
   &:hover svg {
     fill: #46c1ae;
@@ -99,6 +101,7 @@
     margin: 0;
     padding: 0;
     margin-right: 20px;
+    cursor: pointer;
 
     &:hover svg {
       fill: #46c1ae;

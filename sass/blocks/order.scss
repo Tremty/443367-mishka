@@ -108,6 +108,7 @@
 
   border: 2px solid #444444;
   border-radius: 45px;
+  cursor: pointer;
 }
 
 .order__radio input[type="radio"]:hover + label::before {
@@ -162,6 +163,7 @@
 .order__checkbox {
   padding-top: 22px;
   padding-bottom: 22px;
+  cursor: pointer;
 }
 
 .order__checkbox input[type="checkbox"]:hover + label::before {
@@ -237,6 +239,7 @@
   outline: none;
   border: none;
   border-bottom: 2px solid #000000;
+  cursor: pointer;
 }
 
 .order__input:hover input {
@@ -269,6 +272,7 @@
 
   outline: none;
   border: 1px solid #000000;
+  cursor: pointer;
 }
 
 .order__input:hover textarea {

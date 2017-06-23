@@ -35,6 +35,7 @@
 
 .contacts__mail .contacts__data-descr {
   border-bottom: 1px solid #62d1ba;
+  cursor: pointer;
 
   &:hover {
     color: #46c1ae;
@@ -127,7 +128,8 @@
   }
 
   .contacts__map {
-    width: 100%;
+    width: 768px;
+    height: 457px;
   }
 
   .contacts__write {
@@ -170,7 +172,7 @@
   }
 
   .contacts__map {
-    width: 520px;
+    width: 526px;
     order: 3;
   }
 

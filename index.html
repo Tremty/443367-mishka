@@ -25,6 +25,23 @@
       </symbol>
     </svg>
 
+    <script>
+      function initMap() {
+        var uluru = {lat: 59.938, lng: 30.323};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 14,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAk6lcsf-4xf2xvZD7iBn8e3KXqeodJSNk&callback=initMap">
+    </script>
+
     <header class="main-header">
       <div class="main-header__wrapper">
         <h1 class="main-header__title">Мишка - изделия ручной работы</h1> <!-- Скрыть для всех, кроме читалок -->
@@ -221,8 +238,9 @@
           </tr>
         </table>
       </div>
-        <div class="contacts__map" id="YMapsID">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424123754!2d30.320894615760196!3d59.938796869048296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1497901879247" style="border:0" allowfullscreen></iframe>
+        <div class="contacts__map" id="map">
+         <!-- id="YMapsID"> -->
+          <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424123754!2d30.320894615760196!3d59.938796869048296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1497901879247" style="border:0" allowfullscreen></iframe> -->
         </div>
         <div class="contacts__wrapper">
         <div class="big-btn contacts__write">
@@ -268,6 +286,7 @@
         </div>
       </div>
     </footer>
+
     <script>
         var navMain = document.querySelector('.main-menu');
         var navToggle = document.querySelector('.main-menu__toggler');
