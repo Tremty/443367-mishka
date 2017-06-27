@@ -1,13 +1,13 @@
 .review {
-  padding-top: 5px;
+  padding-top: 17px;
   padding-right: 30px;
   padding-bottom: 35px;
   padding-left: 30px;
 }
 
 .review__title {
-  margin-top: 23px;
-  margin-bottom: 30px;
+  margin-top: 20px;
+  margin-bottom: 23px;
   font-weight: bold;
   font-size: 25px;
   line-height: 30px;
@@ -32,7 +32,6 @@
 }
 
 .review__author-mail {
-
   font-size: 17px;
   line-height: 30px;
   color: $color-normal;
@@ -55,6 +54,38 @@
   border-left: 0.5px solid #ececec;
 }
 
+.review__btn--prev {
+  background-image: url("../img/icon-left-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 52px 26px;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.review__btn--next {
+  background-image: url("../img/icon-right-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 52px 26px;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
 .review__write {
   margin-top: 42px;
 }
@@ -62,7 +93,7 @@
 @media (min-width: 768px) {
 
   .review {
-    padding-top: 79px;
+    padding-top: 76px;
     padding-right: 50px;
     padding-bottom: 110px;
     padding-left: 50px;
@@ -74,6 +105,7 @@
   }
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+
     .review {
       background-image: url("../img/review@2x.jpg");
       background-size: 350px 457px;
@@ -86,7 +118,7 @@
 
   .review__title {
     margin-top: 0px;
-    padding-bottom: 20px;
+    padding-bottom: 25px;
 
     font-size: 43px;
     line-height: 50px;
@@ -143,15 +175,16 @@
 @media (min-width: 1150px) {
 
   .review {
+    padding-top: 74px;
     padding-right: 50px;
-    padding-bottom: 160px;
+    padding-bottom: 165px;
     padding-left: 225px;
 
     background-position: 50px 0;
   }
 
   .review__title {
-    margin-bottom: 20px;
+    margin-bottom: 24px;
     font-size: 53px;
     line-height: 57px;
   }
@@ -166,11 +199,11 @@
     font-size: 17px;
   }
 
-  .review__author-mail {
-    // margin-bottom: 100px;
+  .review__btn {
+    bottom: 7px;
   }
 
-    .review__btn {
-      bottom: 10px;
+  .review__write {
+    top: 7px;
   }
 }

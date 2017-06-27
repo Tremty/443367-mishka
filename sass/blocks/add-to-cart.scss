@@ -2,7 +2,7 @@
   display: none
 }
 
-  .add-to-cart--opened {
+.add-to-cart--opened {
 
   display: block;
   position: absolute;
@@ -17,56 +17,69 @@
   border-bottom: 1px solid #c6c6c6;
   box-shadow: 0 5px 10px -1px #c6c6c6;
 
-.add-to-cart__title {
-  font-weight: bold;
-  font-size: 25px;
-  line-height: 30px;
-  text-align: center;
-  text-transform: uppercase;
-  color: $color-heading;
-}
-
-.add-to-cart__tip {
-  font-size: 15px;
-  line-height: 30px;
-  text-align: center;
-  color: $color-normal;
-}
-
-.add-to-cart__choose-size input[type="radio"] {
-  display: none;
-}
-
-.add-to-cart__choose-size {
-  display: flex;
-  justify-content: space-between;
-}
-
-.add-to-cart__choose-size label {
-  width: 78px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-
-  font-weight: bold;
-  font-size: 17px;
-  line-height: 16px;
-  text-align: center;
-  color: $color-normal;
-  border: 2px solid #ececec;
-  cursor: pointer;
-
-  &:hover {
-    border: 2px solid #c7c7c7;
+  .add-to-cart__title {
+    padding-top: 35px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $color-heading;
   }
 
-  &:active {
-    border: 2px solid #62d1ba;
+  .add-to-cart__tip {
+    font-size: 15px;
+    line-height: 30px;
+    text-align: center;
+    color: $color-normal;
   }
-}
 
+  .add-to-cart__choose-size input[type="radio"] {
+    display: none;
+  }
+
+  .add-to-cart__choose-size {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .add-to-cart__choose-size label {
+    width: 78px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 16px;
+    text-align: center;
+    color: $color-normal;
+    border: 2px solid #ececec;
+    cursor: pointer;
+
+    &:hover {
+      border: 2px solid #c7c7c7;
+    }
+
+    &:active {
+      border: 2px solid #62d1ba;
+    }
+  }
 }
 
 @media (min-width: 768px) {
+
+  .add-to-cart--opened {
+
+    bottom: 220px;
+
+    .add-to-cart__title {
+      padding-top: 0;
+      padding-left: 80px;
+      padding-right: 80px;
+    }
+  }
 
   .add-to-cart {
     width: 320px;
@@ -83,8 +96,6 @@
     line-height: 16px;
     color: $color-normal;
     border: 2px solid #ececec;
-
-
   }
 
   .add-to-cart__title {
@@ -99,10 +110,6 @@
     text-align: center;
     color: $color-normal;
   }
-
-    .add-to-cart--opened {
-      bottom: 220px;
-    }
 }
 
 @media (min-width: 1150px) {

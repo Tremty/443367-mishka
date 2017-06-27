@@ -12,15 +12,15 @@
 }
 
 .order__wrapper {
-  padding-top: 25px;
+  padding-top: 23px;
   padding-right: 30px;
   padding-bottom: 56px;
   padding-left: 30px;
 }
 
 .order__info {
-  margin-top: 0px;
-  margin-bottom: 25px;
+  margin-top: 0;
+  margin-bottom: 6px;
 
   font-size: 13px;
   line-height: 24px;
@@ -47,12 +47,8 @@
   margin-bottom: 12px;
 }
 
-.order__input--tel, .order__input--email {
-  margin-bottom: 27px;
-}
-
 .order__radio,
- .order__checkbox {
+.order__checkbox {
   width: 260px;
   font-weight: bold;
   font-size: 17px;
@@ -63,12 +59,6 @@
 .order__radio {
   padding-top: 14px;
   padding-bottom: 14px;
-}
-
-.required {
-  font-size: 14px;
-  line-height: 16px;
-  color: $color-normal;
 }
 
 .order__btn {
@@ -85,14 +75,12 @@
   position: relative;
 }
 
-
-
 .order__radio:nth-of-type(2) input[type="radio"] + label::before {
-    bottom: 3px;
+  bottom: 3px;
 }
 
 .order__radio:nth-of-type(1) input[type="radio"] + label::before {
-    bottom: 63px;
+  bottom: 63px;
 }
 
 .order__radio input[type="radio"] + label::before {
@@ -100,7 +88,6 @@
   position: absolute;
   left: 0px;
 
-  // display: block;
   display: inline-block;
   width: 35px;
   height: 35px;
@@ -128,26 +115,44 @@
 
 @media (max-width: 767px) {
 
-.order__form .order__heading {
-    overflow: hidden;
-}
+  .order__form .order__list:nth-of-type(1) .order__radio {
+    padding-left: 60px;
+  }
 
-.order__form .order__heading::after {
-  content: "";
-  margin-right: -100%;
-  width: 100%;
-  box-sizing: border-box;
-  display: inline-block;
-  vertical-align: middle;
-  height: 2px;
-  background-color: $color-sub;
-  border-left: solid #ffffff;
-  border-left-width: 25px;
-}
+  .order__form {
+    position: relative;
+  }
 
-.order__form .order__list:nth-of-type(1) .order__radio {
-  padding-left: 60px;
-}
+  .order__heading {
+    position: relative;
+    display: inline-block;
+    background: white;
+    padding-right: 20px;
+  }
+
+  .order__form::before {
+    content: "";
+    position: absolute;
+    top: 25px;
+
+    display: block;
+    width: 100%;
+    height: 1px;
+
+    background-color: $color-sub;
+  }
+
+  .order__form:nth-of-type(2)::before{
+    top: 38px;
+  }
+
+  .order__form:nth-of-type(3)::before{
+    top: 28px;
+  }
+
+  .order__form:nth-of-type(4)::before{
+    top: 39px;
+  }
 }
 
 // Стилизация чекбокса
@@ -162,7 +167,7 @@
 
 .order__checkbox {
   padding-top: 22px;
-  padding-bottom: 22px;
+  padding-bottom: 21.5px;
   cursor: pointer;
 }
 
@@ -181,6 +186,10 @@
       top: 11+61px*$i;
     }
   }
+
+  .order__form:nth-of-type(3) .order__list .order__input--text:last-of-type {
+    margin-bottom: 1px;
+  }
 }
 
 .order__checkbox input[type="checkbox"] {
@@ -191,9 +200,11 @@
   content: "";
   position: absolute;
   left: 0px;
+
   display: inline-block;
   width: 37px;
   height: 37px;
+
   border: 2px solid #444444;
 }
 
@@ -221,7 +232,6 @@
   margin-bottom: 26px;
 }
 
-
 .order__input--text label {
   font-weight: bold;
 }
@@ -229,8 +239,8 @@
 .order__input input {
   width: 100%;
   box-sizing: border-box;
-  padding-top: 17px;
-  padding-bottom: 17px;
+  padding-top: 11px;
+  padding-bottom: 12px;
 
   font-family: "Open sans", "Tahoma", sans-serif;
   font-size: 19px;
@@ -260,11 +270,11 @@
   box-sizing: border-box;
   resize: none;
 
-  padding-top: 17px;
+  padding-top: 16px;
   padding-right: 15px;
   padding-bottom: 9px;
   padding-left: 15px;
-  margin-bottom: 17px;
+  margin-bottom: 0;
 
   font-family: "Open sans", "Tahoma", sans-serif;
   font-size: 19px;
@@ -284,7 +294,6 @@
 }
 
 textarea::-webkit-input-placeholder {
-  // padding: 10px;
   font-size: 17px;
   line-height: 18px;
   color: $color-normal;
@@ -292,7 +301,6 @@ textarea::-webkit-input-placeholder {
 }
 
 textarea:-ms-input-placeholder {
-  // padding: 10px;
   font-size: 17px;
   line-height: 18px;
   color: $color-normal;
@@ -300,7 +308,6 @@ textarea:-ms-input-placeholder {
 }
 
 textarea::-moz-placeholder {
-  // padding: 10px;
   font-size: 17px;
   line-height: 18px;
   color: $color-normal;
@@ -334,12 +341,14 @@ input::-moz-placeholder {
 
 .order__form:nth-of-type(4) .order__list:first-of-type::after {
   content: "";
-  width: 30px;
-  height: 25px;
-  display: inline-block;
   position: absolute;
   bottom: 15px;
   right: 6px;
+
+  display: inline-block;
+  width: 30px;
+  height: 25px;
+
   opacity: 0.2;
 
   background-image: url("../img/icon-phone.svg");
@@ -354,12 +363,14 @@ input::-moz-placeholder {
 
 .order__form:nth-of-type(4) .order__list:last-of-type::after {
   content: "";
-  width: 32px;
-  height: 30px;
-  display: inline-block;
   position: absolute;
   bottom: 15px;
   right: 6px;
+
+  width: 32px;
+  height: 30px;
+  display: inline-block;
+
   opacity: 0.2;
 
   background-image: url("../img/icon-mail.svg");
@@ -368,16 +379,22 @@ input::-moz-placeholder {
   background-size: 32px 30px;
 }
 
+.order__action span {
+  font-size: 13px;
+  line-height: 15px;
+  color: $color-normal;
+}
+
 @media (min-width: 768px) {
 
   .order::after {
     content: "";
     position: absolute;
+    top: 300px;
+
     display: block;
     width: 100%;
     height: 25px;
-
-    top: 300px;
 
     background-image: url("../img/bg-zigzag-fill.svg");
     background-repeat: repeat-x;
@@ -421,23 +438,20 @@ input::-moz-placeholder {
   }
 
   .order__radio  {
-    // width: 320px;
     padding-left: 90px;
     padding-top: 28px;
     padding-bottom: 28px;
   }
 
-
   .order__radio:nth-of-type(2) input[type="radio"] + label::before {
-      bottom: 8px;
-      left: 9px;
+    bottom: 8px;
+    left: 9px;
   }
 
   .order__radio:nth-of-type(1) input[type="radio"] + label::before {
-      bottom: 85px;
-      left: 9px;
+    bottom: 85px;
+    left: 9px;
   }
-
 
   .order__heading {
     padding-right: 110px;
@@ -450,7 +464,6 @@ input::-moz-placeholder {
 
   .order__form:nth-of-type(1) .order__heading {
     padding-right: 120px;
-
   }
 
   .order__form:nth-of-type(2) .order__heading {
@@ -467,11 +480,11 @@ input::-moz-placeholder {
   }
 
   .order__radio label br {
-      content: "";
+    content: "";
   }
 
   .order__radio label br::after {
-      content: "\00a0";
+    content: "\00a0";
   }
 
   .order__form:nth-of-type(2) .order__list {
@@ -509,12 +522,19 @@ input::-moz-placeholder {
     margin-top: 0;
   }
 
+  .order__form:nth-of-type(4) .order__list:first-of-type {
+    margin-bottom: 26px;
+  }
+
+  .order__form:nth-of-type(4) .order__list:last-of-type {
+    padding-bottom: 26px;
+  }
+
   .order__form:nth-of-type(4) .order__list .order__heading {
     padding-top: 17px;
   }
 
   .order__form:nth-of-type(5) .order__heading {
-    // padding-top: 17px;
     margin-top: 17px;
   }
 
@@ -549,7 +569,6 @@ input::-moz-placeholder {
   .order__form:nth-of-type(3) .order__list {
     width: 100%;
     box-sizing: border-box;
-
     padding-left: 14px;
   }
 
@@ -561,7 +580,6 @@ input::-moz-placeholder {
   .order__input--text label {
     padding-top: 12px;
     padding-right: 23px;
-
   }
 
   .order__input--text {
@@ -574,8 +592,7 @@ input::-moz-placeholder {
   }
 
   .order__form:nth-last-of-type(3) .order__list:nth-of-type(2) .order__heading {
-    padding-right: 48px;
-
+    padding-right: 88px;
   }
 
   .order__form:nth-last-of-type(3) .order__list {
@@ -584,12 +601,10 @@ input::-moz-placeholder {
 
     width: 100%;
     box-sizing: border-box;
-
   }
 
   .order__input--tel {
     width: 100%;
-
   }
 
   .order__input--email {
@@ -597,7 +612,6 @@ input::-moz-placeholder {
   }
 
   .order__form:nth-last-of-type(3) .order__heading {
-    // width: 170px;
     margin-right: 0;
   }
 
@@ -626,12 +640,6 @@ input::-moz-placeholder {
   .order__input--email input {
     background-color: #f1f1f1;
   }
-
-
-  // .order__form:nth-last-of-type(3) .order__list:first-of-type {
-  //   margin-bottom: 16px;
-  // }
-
 
   .order__form:nth-last-of-type(2) .order__list {
     width: 100%;
@@ -673,11 +681,6 @@ input::-moz-placeholder {
     padding-right: 78px;
   }
 
-  .required {
-    font-size: 17px;
-    line-height: 30px;
-  }
-
   .order__action {
     display: flex;
     flex-direction: row-reverse;
@@ -688,6 +691,11 @@ input::-moz-placeholder {
     align-items: baseline;
   }
 
+  .order__action span {
+    font-size: 17px;
+    line-height: 30px;
+  }
+
   .order__btn {
     width: 230px;
     margin-top: 0;
@@ -695,40 +703,44 @@ input::-moz-placeholder {
 }
 
 @media (min-width: 768px) and (max-width: 1149px) {
+
   .order__checkbox:nth-of-type(1) input[type="checkbox"] + label::before {
     left: 2px;
     top: 0px;
   }
+
   .order__checkbox:nth-of-type(2) input[type="checkbox"] + label::before {
     top: 0px;
     left: 265px;
-
   }
+
   .order__checkbox:nth-of-type(3) input[type="checkbox"] + label::before {
     left: 2px;
     top: 74px;
   }
+
   .order__checkbox:nth-of-type(4) input[type="checkbox"] + label::before {
     top: 74px;
     left: 265px;
   }
+
   .order__checkbox:nth-of-type(5) input[type="checkbox"] + label::before {
     left: 2px;
     top: 150px;
   }
+
   .order__checkbox:nth-of-type(6) input[type="checkbox"] + label::before {
     top: 150px;
     left: 265px;
   }
 
-
   .order__form:nth-of-type(4) .order__list:first-of-type::after {
-    bottom: 45px;
+    bottom: 33px;
     right: 26px;
   }
 
   .order__form:nth-of-type(4) .order__list:last-of-type::after {
-    bottom: 45px;
+    bottom: 44px;
     right: 26px;
   }
 }
@@ -737,7 +749,7 @@ input::-moz-placeholder {
 
   .order::after {
     height: 34px;
-    top: 325px;
+    top: 320px;
     background-size: 1150px 34px;
   }
 
@@ -786,11 +798,12 @@ input::-moz-placeholder {
     left: -19px;
     top: -5px;
   }
+
   .order__checkbox:nth-of-type(2) input[type="checkbox"] + label::before {
     top: -4px;
     left: 243px;
-
   }
+
   .order__checkbox:nth-of-type(3) input[type="checkbox"] + label::before {
     top: -4px;
     left: 507px;
@@ -800,10 +813,12 @@ input::-moz-placeholder {
     top: 72px;
     left: -19px;
   }
+
   .order__checkbox:nth-of-type(5) input[type="checkbox"] + label::before {
     top: 72px;
     left: 243px;
   }
+
   .order__checkbox:nth-of-type(6) input[type="checkbox"] + label::before {
     top: 72px;
     left: 507px;
@@ -814,16 +829,14 @@ input::-moz-placeholder {
     padding-right: 60px;
   }
 
-
-
   .order__form:nth-of-type(4) .order__heading {
     padding-top: 17px;
     padding-right: 80px;
   }
 
-  // .order__form:nth-of-type(4) .order__heading:nth-of-type(1) {
-  //   padding-right: 110px;
-  // }
+  .order__form:nth-last-of-type(3) .order__list:nth-of-type(2) .order__heading {
+    padding-right: 63px;
+  }
 
   .order__btn {
     margin-left: 175px;
@@ -834,16 +847,32 @@ input::-moz-placeholder {
   }
 
   .order__form:nth-of-type(4) .order__list:first-of-type::after {
-    bottom: 45px;
+    bottom: 25px;
     right: 6px;
   }
 
   .order__form:nth-of-type(4) .order__list:last-of-type::after {
-    bottom: 45px;
+    bottom: 40px;
     right: 6px;
   }
 
   .order__form:nth-of-type(5) {
-    padding-bottom: 30px;
+    padding-bottom: 35px;
+  }
+
+  .order__form:nth-of-type(3) {
+    padding-right: 225px;
+  }
+
+  .order__form:nth-of-type(4) {
+    padding-right: 225px;
+  }
+
+  .order__form:nth-of-type(5) {
+    padding-right: 225px;
+  }
+
+  .order__action {
+    padding-right: 107px;
   }
 }

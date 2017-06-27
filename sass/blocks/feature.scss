@@ -8,7 +8,6 @@
 .feature__title {
   margin-top: 0px;
   margin-bottom: 0px;
-  padding-bottom: 10px;
 
   font-size: 25px;
   font-weight: bold;
@@ -23,47 +22,160 @@
 }
 
 .feature__descr {
+  display: inline-block;
+  width: 200px;
+  padding-top: 83px;
+
+  vertical-align: middle;
   font-size: 17px;
   font-weight: bold;
   line-height: 20px;
   color: $color-heading;
 }
 
-.feature__icon {
-  width: 50px;
+.feature__item:nth-of-type(1) .feature__descr {
+  width: 197px;
+}
+
+.feature__item:nth-of-type(4) .feature__descr,
+.feature__item:nth-of-type(5) .feature__descr {
+  width: 250px;
+}
+
+.feature__item {
+  position: relative;
+}
+
+.feature__item::before {
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+.feature__item:nth-of-type(1)::before {
+  bottom: 55px;
+  left: 5px;
+
+  width: 38px;
   height: 40px;
-  padding-top: 16px;
-  padding-bottom: 22px;
+
+  background-image: url("../img/icon-feature-1.svg");
+  background-repeat: no-repeat;
+  background-size: 38px 40px;
+  background-position: center;
 }
 
-.feature__icon {
-  fill: #63d1bb;
+.feature__item:nth-of-type(2)::before {
+  bottom: 60px;
+  left: 2px;
+
+  width: 47px;
+  height: 40px;
+
+  background-image: url("../img/icon-feature-3.svg");
+  background-repeat: no-repeat;
+  background-size: 47px 40px;
+  background-position: center;
 }
 
+.feature__item:nth-of-type(3)::before {
+  bottom: 55px;
+  left: 2px;
+
+  width: 37px;
+  height: 40px;
+
+  background-image: url("../img/icon-feature-5.svg");
+  background-repeat: no-repeat;
+  background-size: 37px 40px;
+  background-position: center;
+}
+
+.feature__item:nth-of-type(4)::before {
+  bottom: 55px;
+  left: -2px;
+
+  width: 38px;
+  height: 40px;
+
+  background-image: url("../img/icon-feature-2.svg");
+  background-repeat: no-repeat;
+  background-size: 38px 40px;
+  background-position: center;
+}
+
+.feature__item:nth-of-type(5)::before {
+  bottom: 60px;
+  left: -3px;
+
+  width: 49px;
+  height: 42px;
+
+  background-image: url("../img/icon-feature-4.svg");
+  background-repeat: no-repeat;
+  background-size: 49px 42px;
+  background-position: center;
+}
+
+.feature__item:nth-of-type(6)::before {
+  bottom: 55px;
+  left: 2px;
+
+  width: 35px;
+  height: 40px;
+
+  background-image: url("../img/icon-feature-6.svg");
+  background-repeat: no-repeat;
+  background-size: 35px 40px;
+  background-position: center;
+}
 
 @media (min-width: 768px) {
 
   .feature {
-    padding-top: 45px;
+    padding-top: 42px;
     padding-right: 50px;
     padding-bottom: 52px;
     padding-left: 50px;
   }
 
   .feature__title {
-    padding-bottom: 0;
+    padding-bottom: 0px;
     font-size: 43px;
     line-height: 50px;
   }
 
   .feature__descr {
+    width: 230px;
+    padding-top: 110px;
     font-size: 20px;
     line-height: 22px;
   }
 
   .feature__item {
-    padding-top: 26px;
-    width: 300px;
+    width: 334px;
+  }
+
+  .feature__item:nth-of-type(1) .feature__descr {
+    width: 230px;
+    padding-top: 105px;
+  }
+
+  .feature__item:nth-of-type(2) .feature__descr {
+    width: 240px;
+  }
+
+  .feature__item:nth-of-type(4) .feature__descr {
+    width: 297px;
+    padding-top: 105px;
+  }
+
+  .feature__item:nth-of-type(5) .feature__descr {
+    width: 297px;
+  }
+
+  .feature__item:nth-of-type(6) .feature__descr {
+    width: 250px;
   }
 
   .feature__list {
@@ -75,23 +187,35 @@
     margin: 0;
   }
 
-  .feature__icon {
-    width: 50px;
-    height: 40px;
-    padding-top: 18px;
-    padding-bottom: 20px;
+  .feature__item:nth-of-type(1)::before {
+    bottom: 60px;
   }
 
-  .feature__icon {
-    padding-top: 16px;
-    padding-bottom: 26px;
+  .feature__item:nth-of-type(2)::before {
+    bottom: 65px;
+  }
+
+  .feature__item:nth-of-type(3)::before {
+    bottom: 60px;
+  }
+
+  .feature__item:nth-of-type(4)::before {
+    bottom: 60px;
+  }
+
+  .feature__item:nth-of-type(5)::before {
+    bottom: 65px;
+  }
+
+  .feature__item:nth-of-type(6)::before {
+    bottom: 60px;
   }
 }
 
 @media (min-width: 1150px) {
 
   .feature {
-    padding-top: 65px;
+    padding-top: 60px;
     padding-right: 215px;
     padding-bottom: 55px;
     padding-left: 225px;
@@ -100,10 +224,5 @@
   .feature__title {
     font-size: 53px;
     line-height: 57px;
-  }
-
-  .feature__icon {
-    padding-top: 19px;
-    padding-bottom: 22px;
   }
 }

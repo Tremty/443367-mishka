@@ -64,7 +64,7 @@
 @media (min-width: 768px) {
 
   .contacts {
-    padding-top: 60px;
+    padding-top: 65px;
     padding-bottom: 55px;
   }
 
@@ -112,7 +112,7 @@
   }
 
   .contacts__mail {
-    margin-right: auto;
+    width: 330px;
   }
 
   .contacts__location .contacts__data-descr br:nth-child(2) {
@@ -124,7 +124,7 @@
   }
 
   .contacts__location {
-    margin-right: 20px;
+    margin-right: 0px;
   }
 
   .contacts__map {
@@ -150,7 +150,7 @@
     flex-direction: column;
     flex-wrap: wrap;
 
-    padding-top: 73px;
+    padding-top: 71px;
     padding-right: 50px;
     padding-bottom: 0;
     padding-left: 225px;
@@ -185,12 +185,17 @@
   }
 
   .contacts__write {
-    margin-top: 27px;
+    margin-top: 50px;
     margin-left: 0;
   }
 
   .contacts__title::before {
     top: -8px;
     left: -114px;
+  }
+
+  .contacts__info td {
+    padding-top: 27px;
+    padding-bottom: 4px;
   }
 }

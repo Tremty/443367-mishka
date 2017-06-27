@@ -29,65 +29,26 @@
     outline: none;
   }
 
-    &:not(.review__btn--prev):not(.review__btn--next):hover a {
-      color: $bg-color;
-    }
+  &:not(.review__btn--prev):not(.review__btn--next):hover a {
+    color: $bg-color;
+  }
 
-    &:not(.review__btn--prev):not(.review__btn--next):active a {
-      color: $bg-color;
-      opacity: 0.3;
-    }
+  &:not(.review__btn--prev):not(.review__btn--next):active a {
+    color: $bg-color;
+    opacity: 0.3;
+  }
 }
-
-
-
 
 .big-btn a {
   display: block;
 
   font-size: 17px;
-  // line-height: 16px;
   text-align: center;
   text-decoration: none;
   color: $color-normal;
 }
 
-.review__btn--prev {
-  background-image: url("../img/icon-left-arrow.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 52px 26px;
-  cursor: pointer;
-
-  &:hover {
-    opacity: 0.6;
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
-}
-
-.review__btn--next {
-  background-image: url("../img/icon-right-arrow.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 52px 26px;
-  cursor: pointer;
-
-  &:hover {
-    opacity: 0.6;
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
-}
-
-
-
 .btn--add {
-  // line-height: 16px;
   background-color: #63d1bb;
   color: #ffffff;
   border-color: #63d1bb;
@@ -106,9 +67,5 @@
 
   .big-btn {
     font-size: 17px;
-  }
-
-  .video-presentation__btn {
-    line-height: 16px;
   }
 }
