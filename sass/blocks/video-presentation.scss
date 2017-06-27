@@ -1,5 +1,5 @@
 .video-presentation {
-  padding-top: 30px;
+  padding-top: 0px;
   padding-right: 30px;
   padding-bottom: 60px;
   padding-left: 30px;
@@ -40,7 +40,9 @@
 }
 
 .video-presentation__title {
-  margin-top: 25px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 25px;
   padding-left: 90px;
 
   font-weight: bold;
@@ -79,7 +81,8 @@
 }
 
 .video-presentation__text {
-  margin-top: 30px;
+  margin-top: 0;
+  padding-top: 25px;
   font-size: 13px;
   line-height: 24px;
   color: $color-normal;
@@ -105,14 +108,16 @@
   }
 
   .video-presentation__wrapper::before {
-    top: 515px;
+    top: 485px;
     left: 40px;
   }
 
   .video-presentation__title {
-    margin-top: 40px;
-    margin-bottom: 40px;
-    padding-left: 100px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 35px;
+    padding-bottom: 8px;
+    padding-left: 105px;
     order: 2;
 
     font-size: 20px;
@@ -123,6 +128,10 @@
     order: 1;
   }
 
+  .video-presentation__basket {
+    position: absolute;
+  }
+
   .video-presentation__info {
     padding-right: 41px;
     padding-left: 41px;
@@ -130,6 +139,7 @@
   }
 
   .video-presentation__text {
+    padding-bottom: 11px;
     margin-top: 0;
     font-size: 15px;
     line-height: 30px;
@@ -139,19 +149,11 @@
     bottom: 190px;
     left: 280px;
   }
-}
 
-@media (min-width: 768px) and (max-width: 1150px) {
-
-  .video-presentation__title br {
-    content: "";
-  }
-
-  .video-presentation__title br::after {
-      content: "\00a0";
+  .video-presentation__btn {
+    line-height: 16px;
   }
 }
-
 
 @media (min-width: 1150px) {
 
@@ -160,10 +162,10 @@
   }
 
   .video-presentation__wrapper {
-      flex-direction: column;
-      flex-wrap: wrap;
-      height: 455px;
-      padding-bottom: 0;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 455px;
+    padding-bottom: 0;
   }
 
   .video-presentation__wrapper::before {
@@ -173,10 +175,10 @@
 
   .video-presentation__title {
     margin: 0;
-    padding-top: 100px;
-    padding-right: 140px;
-    padding-bottom: 40px;
+    padding-top: 95px;
+    padding-bottom: 35px;
     padding-left: 70px;
+    width: 160px;
   }
 
   .video-presentation__info {
@@ -186,7 +188,8 @@
   }
 
   .video-presentation__text {
-    padding-bottom: 30px;
+    padding-top: 0;
+    padding-bottom: 23px;
   }
 
   .video-presentation__design img {

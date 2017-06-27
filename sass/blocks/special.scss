@@ -64,6 +64,7 @@
 
 .special__order-btn {
   cursor: pointer;
+
   &:active {
     color: #8d8d8d;
   }
@@ -132,13 +133,13 @@
 @media (min-width: 1150px) {
 
   .special {
-    padding: 120px 50px 70px 50px;
+    padding: 123px 50px 70px 50px;
   }
 
   .special__header {
     flex-direction: row-reverse;
     justify-content: flex-end;
-    margin-bottom: 42px;
+    margin-bottom: 46px;
   }
 
   .special__aside {
@@ -170,8 +171,13 @@
     margin-bottom: 50px;
   }
 
+  .special__stat td {
+    padding-top: 10px;
+    padding-bottom: 12px;
+  }
+
   .special__product-price {
     padding-bottom: 10px;
-    padding-top: 83px;
+    padding-top: 78px;
   }
 }
