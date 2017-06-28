@@ -104,6 +104,14 @@
     position: relative;
   }
 
+  .special__stat td {
+    padding-bottom: 10px;
+  }
+
+  .special__descr-title {
+    width: 33%;
+  }
+
   .special__product-icon {
     position: absolute;
     max-width: 335px;
@@ -123,7 +131,7 @@
   }
 
   .special__product-price {
-    padding-top: 32px;
+    padding-top: 26px;
     padding-bottom: 10px;
     font-size: 20px;
     line-height: 24px;
@@ -153,6 +161,7 @@
   .special__title {
     font-size: 53px;
     line-height: 57px;
+    margin-bottom: 1px;
   }
 
   .special__product {
@@ -169,11 +178,6 @@
 
   .special__info {
     margin-bottom: 50px;
-  }
-
-  .special__stat td {
-    padding-top: 10px;
-    padding-bottom: 12px;
   }
 
   .special__product-price {

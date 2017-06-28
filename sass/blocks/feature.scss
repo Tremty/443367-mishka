@@ -1,5 +1,5 @@
 .feature {
-  padding-top: 20px;
+  padding-top: 25px;
   padding-right: 30px;
   padding-bottom: 19px;
   padding-left: 30px;
@@ -133,7 +133,7 @@
 @media (min-width: 768px) {
 
   .feature {
-    padding-top: 42px;
+    padding-top: 44px;
     padding-right: 50px;
     padding-bottom: 52px;
     padding-left: 50px;
@@ -192,7 +192,7 @@
   }
 
   .feature__item:nth-of-type(2)::before {
-    bottom: 65px;
+    bottom: 60px;
   }
 
   .feature__item:nth-of-type(3)::before {
@@ -204,7 +204,7 @@
   }
 
   .feature__item:nth-of-type(5)::before {
-    bottom: 65px;
+    bottom: 60px;
   }
 
   .feature__item:nth-of-type(6)::before {
@@ -215,7 +215,7 @@
 @media (min-width: 1150px) {
 
   .feature {
-    padding-top: 60px;
+    padding-top: 62px;
     padding-right: 215px;
     padding-bottom: 55px;
     padding-left: 225px;

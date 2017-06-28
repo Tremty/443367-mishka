@@ -522,6 +522,10 @@ input::-moz-placeholder {
     margin-top: 0;
   }
 
+  .order__form:nth-of-type(4) .order__list:first-of-type .order__heading {
+    padding-right: 136px;
+  }
+
   .order__form:nth-of-type(4) .order__list:first-of-type {
     margin-bottom: 26px;
   }
@@ -592,7 +596,7 @@ input::-moz-placeholder {
   }
 
   .order__form:nth-last-of-type(3) .order__list:nth-of-type(2) .order__heading {
-    padding-right: 88px;
+    padding-right: 116px;
   }
 
   .order__form:nth-last-of-type(3) .order__list {
@@ -678,7 +682,7 @@ input::-moz-placeholder {
   }
 
   .order__form:nth-last-of-type(2) .order__heading {
-    padding-right: 78px;
+    padding-right: 128px;
   }
 
   .order__action {
@@ -735,13 +739,23 @@ input::-moz-placeholder {
   }
 
   .order__form:nth-of-type(4) .order__list:first-of-type::after {
-    bottom: 33px;
-    right: 26px;
+    bottom: 15px;
+    right: 25px;
   }
 
   .order__form:nth-of-type(4) .order__list:last-of-type::after {
-    bottom: 44px;
-    right: 26px;
+    bottom: 34px;
+    right: 25px;
+  }
+
+  .order__input input {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .order__input textarea {
+    padding-left: 18px;
+    padding-right: 18px;
   }
 }
 
@@ -769,6 +783,7 @@ input::-moz-placeholder {
   }
 
   .order__form {
+    padding-top: 52px;
     padding-right: 110px;
     padding-left: 110px;
   }
@@ -776,6 +791,22 @@ input::-moz-placeholder {
   .order__heading {
     margin-right: 0;
     padding-right: 90px;
+  }
+
+  .order__form:nth-of-type(1) {
+    padding-top: 47px;
+  }
+
+  .order__radio {
+    padding-left: 70px;
+  }
+
+  .order__radio:nth-of-type(1) input[type="radio"] + label::before {
+    left: -13px;
+  }
+
+  .order__radio:nth-of-type(2) input[type="radio"] + label::before {
+    left: -13px;
   }
 
   .order__form:nth-of-type(1) .order__heading {
@@ -796,31 +827,31 @@ input::-moz-placeholder {
 
   .order__checkbox:nth-of-type(1) input[type="checkbox"] + label::before {
     left: -19px;
-    top: -5px;
+    top: -1px;
   }
 
   .order__checkbox:nth-of-type(2) input[type="checkbox"] + label::before {
-    top: -4px;
+    top: -1px;
     left: 243px;
   }
 
   .order__checkbox:nth-of-type(3) input[type="checkbox"] + label::before {
-    top: -4px;
+    top: -1px;
     left: 507px;
   }
 
   .order__checkbox:nth-of-type(4) input[type="checkbox"] + label::before {
-    top: 72px;
+    top: 68px;
     left: -19px;
   }
 
   .order__checkbox:nth-of-type(5) input[type="checkbox"] + label::before {
-    top: 72px;
+    top: 68px;
     left: 243px;
   }
 
   .order__checkbox:nth-of-type(6) input[type="checkbox"] + label::before {
-    top: 72px;
+    top: 68px;
     left: 507px;
   }
 
@@ -829,13 +860,25 @@ input::-moz-placeholder {
     padding-right: 60px;
   }
 
+  .order__form:nth-of-type(3) .order__heading {
+    margin-top: 15px;
+  }
+
   .order__form:nth-of-type(4) .order__heading {
     padding-top: 17px;
     padding-right: 80px;
   }
 
+  .order__form:nth-of-type(4) .order__list:first-of-type .order__heading {
+    padding-right: 82px;
+  }
+
   .order__form:nth-last-of-type(3) .order__list:nth-of-type(2) .order__heading {
     padding-right: 63px;
+  }
+
+  .order__form:nth-last-of-type(2) .order__heading {
+    padding-right: 75px;
   }
 
   .order__btn {
@@ -860,6 +903,10 @@ input::-moz-placeholder {
     padding-bottom: 35px;
   }
 
+  .order__form:nth-of-type(2) {
+    padding-top: 49px;
+  }
+
   .order__form:nth-of-type(3) {
     padding-right: 225px;
   }
@@ -870,6 +917,16 @@ input::-moz-placeholder {
 
   .order__form:nth-of-type(5) {
     padding-right: 225px;
+  }
+
+  .order__input input {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .order__input textarea {
+    padding-left: 18px;
+    padding-right: 18px;
   }
 
   .order__action {

@@ -163,7 +163,7 @@
     display: flex;
     min-height: 328px;
 
-    margin-bottom: 54px;
+    margin-bottom: 55px;
     border: none;
     border-top: 1px solid #ececec;
     border-right: 1px solid #ececec;
@@ -177,6 +177,7 @@
   .production__info {
     display: flex;
     flex-direction: column;
+    padding-left: 5px;
   }
 
   .production__descr {

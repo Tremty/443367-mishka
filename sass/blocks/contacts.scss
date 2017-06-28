@@ -61,6 +61,13 @@
    margin-bottom: 38px;
 }
 
+@media (max-width: 767px) {
+
+  .contacts__location td {
+    padding-top: 32px;
+  }
+}
+
 @media (min-width: 768px) {
 
   .contacts {
@@ -76,7 +83,7 @@
   .contacts__title {
     position: relative;
     margin: 0;
-    margin-bottom: 20px;
+    margin-bottom: 23px;
 
     font-size: 43px;
     line-height: 50px;
@@ -185,7 +192,7 @@
   }
 
   .contacts__write {
-    margin-top: 50px;
+    margin-top: 43px;
     margin-left: 0;
   }
 
